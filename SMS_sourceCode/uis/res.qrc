@@ -1,0 +1,27 @@
+<RCC>
+  <qresource prefix="images">
+    <file>materials/welcomeScreen3.png</file>
+    <file>materials/dataEntryBG.png</file>
+    <file>materials/homeSideMenu.png</file>
+    <file>materials/Adnan.jpg</file>
+    <file>materials/smsLogo.png</file>
+    <file>materials/mainScreenBG.png</file>
+    <file>materials/welcomeScreen2.png</file>
+    <file>materials/loginScreen.png</file>
+    <file>materials/welcomeScreen.png</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>materials/icons/plain.png</file>
+    <file>materials/icons/apprentice.png</file>
+    <file>materials/icons/payment-method.png</file>
+    <file>materials/icons/user4.png</file>
+    <file>materials/icons/user2.png</file>
+    <file>materials/icons/presentation2.png</file>
+    <file>materials/icons/dashboard.png</file>
+    <file>materials/icons/speedometer.png</file>
+    <file>materials/icons/students.png</file>
+    <file>materials/icons/calendar.png</file>
+    <file>materials/icons/user.png</file>
+    <file>materials/icons/info7.png</file>
+  </qresource>
+</RCC>
