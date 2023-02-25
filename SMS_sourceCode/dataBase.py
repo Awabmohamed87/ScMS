@@ -10,7 +10,6 @@ firebaseConfig = {
     "appId": "1:90321163000:web:ca87e7c9647573e947a10d",
     "measurementId": "G-1W55SEG7XJ"
 }
-
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
 
@@ -32,9 +31,3 @@ def createUserAccount(email, password):
         print("Account already exists")
         return False
 
-# storage= firebase.storage()
-# storage.child("AdnanST.txt").put("AdnanSt.txt")
-#
-# DB = firebase.database()
-# data= {'Name':'AdnanD','Age':15}
-# DB.child('Person').child(8).set(data)

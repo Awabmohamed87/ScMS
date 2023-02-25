@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="images">
+    <file>materials/reportBG.png</file>
+    <file>materials/attendanceWaiting.png</file>
     <file>materials/welcomeScreen3.png</file>
     <file>materials/dataEntryBG.png</file>
     <file>materials/homeSideMenu.png</file>
@@ -11,6 +13,9 @@
     <file>materials/welcomeScreen.png</file>
   </qresource>
   <qresource prefix="icons">
+    <file>materials/icons/tea-time.png</file>
+    <file>materials/icons/attention.png</file>
+    <file>materials/icons/record.png</file>
     <file>materials/icons/plain.png</file>
     <file>materials/icons/apprentice.png</file>
     <file>materials/icons/payment-method.png</file>

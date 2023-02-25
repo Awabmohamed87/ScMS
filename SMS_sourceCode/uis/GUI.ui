@@ -188,7 +188,7 @@ padding-top:5px;
      <string>Subscription</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="homeExit_btn">
+   <widget class="QPushButton" name="welcomeExit_btn">
     <property name="geometry">
      <rect>
       <x>1371</x>
@@ -206,17 +206,17 @@ padding-top:5px;
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton#homeExit_btn{
+     <string notr="true">QPushButton#welcomeExit_btn{
 background-color: rgb(197, 71, 91);
 	color: rgb(230, 230, 230);
 border-radius:20px;
 }
 
-QPushButton#homeExit_btn:hover{
+QPushButton#welcomeExit_btn:hover{
 background-color: rgba(197, 71, 91,220);
 }
 
-QPushButton#homeExit_btn:pressed{
+QPushButton#welcomeExit_btn:pressed{
 padding-left:5px;
 padding-top:5px;
 background-color: rgba(197, 71, 91,220);
@@ -428,7 +428,7 @@ background-color: rgba(229, 108, 120,220);
     </property>
    </widget>
   </widget>
-  <widget class="QWidget" name="mainManagerScreen_widget" native="true">
+  <widget class="QWidget" name="NewSessionScreen_widget" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -440,10 +440,10 @@ background-color: rgba(229, 108, 120,220);
    <widget class="QLabel" name="mainScreen_BG">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1575</width>
-      <height>900</height>
+      <x>10</x>
+      <y>10</y>
+      <width>1555</width>
+      <height>880</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -454,312 +454,12 @@ border-radius:38px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="sideMenu_widget" native="true">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>331</width>
-      <height>851</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255,240);
-border-radius:38px;</string>
-    </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>30</y>
-       <width>81</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>MS Shell Dlg 2</family>
-       <pointsize>16</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,0);
-color: rgb(64, 64, 64);</string>
-     </property>
-     <property name="text">
-      <string>SMS</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="endSession_btn">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>760</y>
-       <width>291</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Poppins Medium</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton#endSession_btn{
-background-color: rgb(229, 108, 120);
-	color: rgb(230, 230, 230);
-border-radius:20px;
-}
-
-QPushButton#endSession_btn:hover{
-background-color: rgba(229, 108, 120,220);
-}
-
-QPushButton#endSession_btn:pressed{
-padding-left:5px;
-padding-top:5px;
-background-color: rgba(229, 108, 120,220);
-}</string>
-     </property>
-     <property name="text">
-      <string>End Session</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="attendancePage_btn">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>285</y>
-       <width>291</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Poppins Medium</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton#attendancePage_btn{
-	background-color: rgba(108, 127, 254,0);
-	color: rgb(64,64,64);
-border-radius:20px;
-}
-
-QPushButton#attendancePage_btn:hover{
-background-color: rgba(108, 127, 254,50);
-color: rgb(108, 127, 254);
-}
-
-QPushButton#attendancePage_btn:pressed{
-padding-left:5px;
-padding-top:5px;
-background-color: rgba(108, 127, 254,50);
-color: rgb(108, 127, 254);
-}</string>
-     </property>
-     <property name="text">
-      <string> Attendance Record</string>
-     </property>
-     <property name="icon">
-      <iconset resource="res.qrc">
-       <normaloff>:/icons/materials/icons/calendar.png</normaloff>:/icons/materials/icons/calendar.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>25</width>
-       <height>25</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="dashboardPage_btn">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>125</y>
-       <width>291</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Poppins Medium</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton#dashboardPage_btn{
-	background-color: rgba(108, 127, 254,30);
-	color: rgb(108, 127, 254);
-border-radius:20px;
-}
-
-QPushButton#dashboardPage_btn:hover{
-background-color: rgba(108, 127, 254,50);
-color: rgb(108, 127, 254);
-}
-
-QPushButton#dashboardPage_btn:pressed{
-padding-left:5px;
-padding-top:5px;
-background-color: rgba(108, 127, 254,50);
-color: rgb(108, 127, 254);
-}</string>
-     </property>
-     <property name="text">
-      <string> Dashboard    </string>
-     </property>
-     <property name="icon">
-      <iconset resource="res.qrc">
-       <normaloff>:/icons/materials/icons/speedometer.png</normaloff>:/icons/materials/icons/speedometer.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>25</width>
-       <height>25</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>90</y>
-       <width>291</width>
-       <height>2</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>1</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(64,64,64);
-border-radius:5px;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="attentionLevelPage_btn">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>205</y>
-       <width>291</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Poppins Medium</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton#attentionLevelPage_btn{
-	background-color: rgba(108, 127, 254,0);
-	color: rgb(64,64,64);
-border-radius:20px;
-
-}
-
-QPushButton#attentionLevelPage_btn:hover{
-background-color: rgba(108, 127, 254,50);
-color: rgb(108, 127, 254);
-}
-
-QPushButton#attentionLevelPage_btn:pressed{
-padding-left:5px;
-padding-top:5px;
-background-color: rgba(108, 127, 254,50);
-color: rgb(108, 127, 254);
-}</string>
-     </property>
-     <property name="text">
-      <string>Attention Level    </string>
-     </property>
-     <property name="icon">
-      <iconset resource="res.qrc">
-       <normaloff>:/icons/materials/icons/user.png</normaloff>:/icons/materials/icons/user.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>30</width>
-       <height>30</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="manageStudentsPage_btn">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>365</y>
-       <width>291</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Poppins Medium</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton#manageStudentsPage_btn{
-	background-color: rgba(108, 127, 254,0);
-	color: rgb(64,64,64);
-border-radius:20px;
-}
-
-QPushButton#manageStudentsPage_btn:hover{
-background-color: rgba(108, 127, 254,50);
-color: rgb(108, 127, 254);
-}
-
-QPushButton#manageStudentsPage_btn:pressed{
-padding-left:5px;
-padding-top:5px;
-background-color: rgba(108, 127, 254,50);
-color: rgb(108, 127, 254);
-}</string>
-     </property>
-     <property name="text">
-      <string> Manage Students  </string>
-     </property>
-     <property name="icon">
-      <iconset resource="res.qrc">
-       <normaloff>:/icons/materials/icons/students.png</normaloff>:/icons/materials/icons/students.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>25</width>
-       <height>25</height>
-      </size>
-     </property>
-    </widget>
-   </widget>
    <widget class="QWidget" name="topBar_widget" native="true">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>20</y>
-      <width>1181</width>
+      <x>30</x>
+      <y>29</y>
+      <width>1511</width>
       <height>81</height>
      </rect>
     </property>
@@ -767,12 +467,12 @@ color: rgb(108, 127, 254);
      <string notr="true">background-color: rgba(255, 255, 255,220);
 border-radius:20px;</string>
     </property>
-    <widget class="QLabel" name="mainTopBarTitle_label">
+    <widget class="QLabel" name="sessionTopBarTitle_label">
      <property name="geometry">
       <rect>
        <x>30</x>
        <y>10</y>
-       <width>191</width>
+       <width>301</width>
        <height>61</height>
       </rect>
      </property>
@@ -789,22 +489,24 @@ border-radius:20px;</string>
 color: rgb(64, 64, 64);</string>
      </property>
      <property name="text">
-      <string>Dashboard</string>
+      <string>Session Dashboard</string>
      </property>
     </widget>
-    <widget class="QLabel" name="mainUserName_label">
+    <widget class="QLabel" name="sessionTime_label">
      <property name="geometry">
       <rect>
-       <x>990</x>
-       <y>20</y>
-       <width>161</width>
-       <height>31</height>
+       <x>1190</x>
+       <y>0</y>
+       <width>311</width>
+       <height>81</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Poppins Medium</family>
-       <pointsize>11</pointsize>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -812,163 +514,7 @@ color: rgb(64, 64, 64);</string>
 color: rgb(64, 64, 64);</string>
      </property>
      <property name="text">
-      <string>User Name</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="mainUserImage_Label">
-     <property name="geometry">
-      <rect>
-       <x>930</x>
-       <y>24</y>
-       <width>40</width>
-       <height>40</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,0);
-border-image: url(:/icons/materials/icons/user2.png);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="mainJobRole_label">
-     <property name="geometry">
-      <rect>
-       <x>990</x>
-       <y>49</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Poppins</family>
-       <pointsize>9</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,0);
-color: rgb(64, 64, 64);</string>
-     </property>
-     <property name="text">
-      <string>Job Role</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="mainDashboardContainer_widget" native="true">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>120</y>
-      <width>1181</width>
-      <height>751</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255,0);
-border-radius:20px;</string>
-    </property>
-    <widget class="QWidget" name="DashboardContainer_widget_2" native="true">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>12</y>
-       <width>400</width>
-       <height>355</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,220);
-border-radius:20px;</string>
-     </property>
-     <widget class="QLabel" name="dashboardStudyYear_label">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>50</y>
-        <width>141</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Poppins</family>
-        <pointsize>9</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgba(255, 255, 255,0);
-color: rgb(64, 64, 64);</string>
-      </property>
-      <property name="text">
-       <string>In all study years</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="dashboardStudentNumber_label">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>20</y>
-        <width>231</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Poppins Medium</family>
-        <pointsize>11</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgba(255, 255, 255,0);
-color: rgb(64, 64, 64);</string>
-      </property>
-      <property name="text">
-       <string>Total Students Number</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="DashboardContainer_widget_3" native="true">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>394</y>
-       <width>400</width>
-       <height>355</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,220);
-border-radius:20px;</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="DashboardContainer_widget_4" native="true">
-     <property name="geometry">
-      <rect>
-       <x>432</x>
-       <y>12</y>
-       <width>400</width>
-       <height>461</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,220);
-border-radius:20px;</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="DashboardContainer_widget_5" native="true">
-     <property name="geometry">
-      <rect>
-       <x>432</x>
-       <y>498</y>
-       <width>400</width>
-       <height>251</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,220);
-border-radius:20px;</string>
+      <string>Session time elapsed: 0:00:00</string>
      </property>
     </widget>
    </widget>
@@ -982,37 +528,617 @@ border-radius:20px;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,10);
+     <string notr="true">background-color: rgba(0, 0, 0,15);
 border-radius:38px;</string>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="attendanceContainer_widget" native="true">
+   <widget class="QWidget" name="sessionComponentContainer_widget" native="true">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>20</x>
       <y>120</y>
-      <width>1181</width>
-      <height>751</height>
+      <width>1021</width>
+      <height>761</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255,0);
+    <widget class="QWidget" name="sideMenu_widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>510</y>
+       <width>331</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,220);
 border-radius:20px;</string>
-    </property>
+     </property>
+     <widget class="QPushButton" name="endSession_btn">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#endSession_btn{
+background-color: rgb(229, 108, 120);
+	color: rgb(230, 230, 230);
+border-radius:20px;
+}
+
+QPushButton#endSession_btn:hover{
+background-color: rgba(229, 108, 120,220);
+}
+
+QPushButton#endSession_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(229, 108, 120,220);
+}</string>
+      </property>
+      <property name="text">
+       <string>End Session</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>291</width>
+        <height>2</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64,64,64);
+border-radius:5px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="startBreak_btn">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#startBreak_btn{
+	background-color: rgba(33, 140, 116,40);
+	color: rgb(33, 140, 116);
+border-radius:20px;
+}
+
+QPushButton#startBreak_btn:hover{
+background-color: rgba(33, 140, 116,60);
+color: rgb(33, 140, 116);
+}
+
+QPushButton#startBreak_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(33, 140, 116,60);
+color: rgb(33, 140, 116);
+}</string>
+      </property>
+      <property name="text">
+       <string> Start a break</string>
+      </property>
+      <property name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/icons/materials/icons/tea-time.png</normaloff>:/icons/materials/icons/tea-time.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="sideMenu_widget_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>331</width>
+       <height>481</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,220);
+border-radius:20px;</string>
+     </property>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>291</width>
+        <height>2</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64,64,64);
+border-radius:5px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins SemiBold</family>
+        <pointsize>16</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>ScMS</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentAvgAttentionTitle_label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>310</y>
+        <width>301</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>Current average attention level</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentAvgAttention_label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>382</y>
+        <width>291</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>20</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="attendanceRecord_btn">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>190</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#attendanceRecord_btn{
+	background-color: rgba(108, 127, 254,40);
+	color: rgb(108, 127, 254);
+border-radius:20px;
+}
+
+QPushButton#attendanceRecord_btn:hover{
+background-color: rgba(108, 127, 254,60);
+color: rgb(108, 127, 254);
+}
+
+QPushButton#attendanceRecord_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(108, 127, 254,60);
+color: rgb(108, 127, 254);
+}</string>
+      </property>
+      <property name="text">
+       <string> Record attendance</string>
+      </property>
+      <property name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/icons/materials/icons/students.png</normaloff>:/icons/materials/icons/students.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="DashboardContainer_widget_17" native="true">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>508</y>
+       <width>641</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,220);
+border-radius:20px;</string>
+     </property>
+     <widget class="QLabel" name="unfocusedStudentImage_Label_1">
+      <property name="geometry">
+       <rect>
+        <x>21</x>
+        <y>80</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(64, 64, 64,0)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="unfocusedStudentImageFrame_Label_1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>65</y>
+        <width>150</width>
+        <height>160</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="res.qrc">:/icons/materials/icons/attention.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="unfocusedStudentImageFrame_Label_2">
+      <property name="geometry">
+       <rect>
+        <x>167</x>
+        <y>65</y>
+        <width>150</width>
+        <height>160</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="res.qrc">:/icons/materials/icons/attention.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="unfocusedStudentImageFrame_Label_3">
+      <property name="geometry">
+       <rect>
+        <x>322</x>
+        <y>65</y>
+        <width>150</width>
+        <height>160</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="res.qrc">:/icons/materials/icons/attention.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="unfocusedStudentImageFrame_Label_4">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>65</y>
+        <width>150</width>
+        <height>160</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="res.qrc">:/icons/materials/icons/attention.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="unfocusedStudentImage_Label_2">
+      <property name="geometry">
+       <rect>
+        <x>178</x>
+        <y>80</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(64, 64, 64,0)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="unfocusedStudentImage_Label_3">
+      <property name="geometry">
+       <rect>
+        <x>333</x>
+        <y>80</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(64, 64, 64,0)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="unfocusedStudentImage_Label_4">
+      <property name="geometry">
+       <rect>
+        <x>491</x>
+        <y>80</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(64, 64, 64,0)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="InattentiveStudents_label">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>20</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>Inattentive students</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="unfocusedStudentBGImage_Label_1">
+      <property name="geometry">
+       <rect>
+        <x>21</x>
+        <y>80</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(64, 64, 64,30)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="unfocusedStudentBGImage_Label_2">
+      <property name="geometry">
+       <rect>
+        <x>178</x>
+        <y>80</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(64, 64, 64,30)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="unfocusedStudentBGImage_Label_3">
+      <property name="geometry">
+       <rect>
+        <x>333</x>
+        <y>80</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(64, 64, 64,30)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="unfocusedStudentBGImage_Label_4">
+      <property name="geometry">
+       <rect>
+        <x>491</x>
+        <y>80</y>
+        <width>128</width>
+        <height>128</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(64, 64, 64,30)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <zorder>unfocusedStudentImageFrame_Label_1</zorder>
+     <zorder>unfocusedStudentImageFrame_Label_2</zorder>
+     <zorder>unfocusedStudentImageFrame_Label_3</zorder>
+     <zorder>unfocusedStudentImageFrame_Label_4</zorder>
+     <zorder>InattentiveStudents_label</zorder>
+     <zorder>unfocusedStudentBGImage_Label_1</zorder>
+     <zorder>unfocusedStudentBGImage_Label_2</zorder>
+     <zorder>unfocusedStudentBGImage_Label_3</zorder>
+     <zorder>unfocusedStudentBGImage_Label_4</zorder>
+     <zorder>unfocusedStudentImage_Label_1</zorder>
+     <zorder>unfocusedStudentImage_Label_2</zorder>
+     <zorder>unfocusedStudentImage_Label_3</zorder>
+     <zorder>unfocusedStudentImage_Label_4</zorder>
+    </widget>
     <widget class="QWidget" name="cameraAttendanceContainer_widget" native="true">
      <property name="geometry">
       <rect>
-       <x>5</x>
+       <x>360</x>
        <y>12</y>
        <width>640</width>
        <height>480</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgba(64,64,64,100);
+      <string notr="true">background-color: rgba(64, 64, 64,50);
 border-radius:20px;</string>
      </property>
      <widget class="QLabel" name="cameraAttendance_Label">
@@ -1032,88 +1158,119 @@ border-radius:20px;</string>
        <string/>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="DashboardContainer_widget_17" native="true">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>508</y>
-       <width>641</width>
-       <height>241</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,220);
-border-radius:20px;</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="DashboardContainer_widget_18" native="true">
-     <property name="geometry">
-      <rect>
-       <x>662</x>
-       <y>12</y>
-       <width>501</width>
-       <height>737</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,220);
-border-radius:20px;</string>
-     </property>
-     <widget class="QLabel" name="dashboardStudentNumber_label_3">
+     <widget class="QLabel" name="recordingImage_Label">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>20</y>
-        <width>321</width>
-        <height>31</height>
+        <x>0</x>
+        <y>0</y>
+        <width>640</width>
+        <height>480</height>
        </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Poppins Medium</family>
-        <pointsize>11</pointsize>
-       </font>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgba(255, 255, 255,0);
-color: rgb(64, 64, 64);</string>
+</string>
       </property>
       <property name="text">
-       <string>Students who have registered</string>
+       <string/>
       </property>
-     </widget>
-     <widget class="QTableWidget" name="studentsAttendance_tableWidget">
-      <property name="geometry">
-       <rect>
-        <x>15</x>
-        <y>61</y>
-        <width>471</width>
-        <height>671</height>
-       </rect>
+      <property name="pixmap">
+       <pixmap resource="res.qrc">:/images/materials/attendanceWaiting.png</pixmap>
       </property>
-      <property name="styleSheet">
-       <string notr="true"/>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
-      <column>
-       <property name="text">
-        <string>Student Name</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Time</string>
-       </property>
-      </column>
      </widget>
     </widget>
    </widget>
-   <zorder>mainDashboardContainer_widget</zorder>
+   <widget class="QWidget" name="tabelContainer_widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1040</x>
+      <y>132</y>
+      <width>501</width>
+      <height>737</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255,220);
+border-radius:20px;</string>
+    </property>
+    <widget class="QLabel" name="registeredStudents_label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>321</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+     </property>
+     <property name="text">
+      <string>Students who have registered</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="studentsAttendance_tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>61</y>
+       <width>471</width>
+       <height>671</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,200);</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>Student Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Time</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>In uniform</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="mainScreenDark_BG_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255,255);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>mainScreenDark_BG_4</zorder>
    <zorder>mainScreen_BG</zorder>
    <zorder>mainScreenDark_BG</zorder>
    <zorder>topBar_widget</zorder>
-   <zorder>sideMenu_widget</zorder>
-   <zorder>attendanceContainer_widget</zorder>
+   <zorder>tabelContainer_widget</zorder>
+   <zorder>sessionComponentContainer_widget</zorder>
   </widget>
   <widget class="QWidget" name="homeManagerScreen_widget" native="true">
    <property name="geometry">
@@ -2077,7 +2234,7 @@ background-color: rgba(245, 178, 115,210);
     <widget class="QLabel" name="mainTopBarTitle_label_3">
      <property name="geometry">
       <rect>
-       <x>1430</x>
+       <x>1420</x>
        <y>660</y>
        <width>191</width>
        <height>61</height>
@@ -2096,7 +2253,7 @@ background-color: rgba(245, 178, 115,210);
 color: rgb(64, 64, 64);</string>
      </property>
      <property name="text">
-      <string>SMS</string>
+      <string>ScMS</string>
      </property>
     </widget>
    </widget>
@@ -2122,11 +2279,633 @@ border-radius:38px;</string>
    <zorder>topBar_widget_2</zorder>
    <zorder>mainDashboardContainer_widget_2</zorder>
   </widget>
+  <widget class="QWidget" name="sessionReportScreen_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1575</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="mainScreen_BG_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/images/materials/reportBG.png);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="topBar_widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>1351</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+/*background-color: rgba(239, 174, 74,150);*/
+border-radius:20px;</string>
+    </property>
+    <widget class="QLabel" name="mainTopBarTitle_label_4">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>10</y>
+       <width>231</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins SemiBold</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+     </property>
+     <property name="text">
+      <string>Session Report</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="reportSave_exit_btn">
+     <property name="geometry">
+      <rect>
+       <x>1050</x>
+       <y>10</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#reportSave_exit_btn{
+background-color: rgb(229, 108, 120);
+	color: rgb(230, 230, 230);
+border-radius:20px;
+}
+
+QPushButton#reportSave_exit_btn:hover{
+background-color: rgba(229, 108, 120,220);
+}
+
+QPushButton#reportSave_exit_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(229, 108, 120,220);
+}</string>
+     </property>
+     <property name="text">
+      <string>Save and Exit</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="mainDashboardContainer_widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>1531</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,0);
+border-radius:20px;</string>
+    </property>
+    <widget class="QPushButton" name="save_backHome_btn">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>640</y>
+       <width>471</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#save_backHome_btn{
+	
+	background-color: rgb(44, 62, 80);
+	color: rgb(255, 255, 255);
+border-radius:20px;
+}
+
+QPushButton#save_backHome_btn:hover{
+background-color: rgba(44, 62, 80,210);
+
+}
+
+QPushButton#save_backHome_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(44, 62, 80,210);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Save and Back to Home</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="reportSessionTime_label">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>30</y>
+       <width>311</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+     </property>
+     <property name="text">
+      <string>Session time elapsed: 0:00:00</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="averageAttentionLevelBG_4" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>570</y>
+       <width>501</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 63, 121,150);
+border-radius:38px;</string>
+     </property>
+     <widget class="QLabel" name="numOfStudentsTitle_label">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>40</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>Number of students</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="numOfStudents_label">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>70</y>
+        <width>301</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>20</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="averageAttentionLevel_widget_4" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>481</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,255);
+border-radius:38px;</string>
+      </property>
+     </widget>
+     <zorder>averageAttentionLevel_widget_4</zorder>
+     <zorder>numOfStudentsTitle_label</zorder>
+     <zorder>numOfStudents_label</zorder>
+    </widget>
+    <widget class="QWidget" name="unifromPieChartBGwidget_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>501</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 63, 121,150);
+border-radius:38px;</string>
+     </property>
+     <widget class="QWidget" name="unifromPieChartwidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>481</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,255);
+border-radius:38px;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="unifromPieChartwidget_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>481</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,255);
+border-radius:38px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>70</y>
+        <width>400</width>
+        <height>2</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64,64,64);
+border-radius:5px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="registeredStudents_label_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>30</y>
+        <width>281</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>Students Unifrom </string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <zorder>unifromPieChartwidget_3</zorder>
+     <zorder>unifromPieChartwidget</zorder>
+     <zorder>label_22</zorder>
+     <zorder>registeredStudents_label_3</zorder>
+    </widget>
+    <widget class="QWidget" name="averageAttentionLevelBG_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>250</y>
+       <width>471</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(64, 64, 64,150);
+border-radius:38px;</string>
+     </property>
+     <widget class="QLabel" name="averageAttentionLevelTitle_label">
+      <property name="geometry">
+       <rect>
+        <x>95</x>
+        <y>30</y>
+        <width>281</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>Average Attention Level</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="averageAttentionLevel_label">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>90</y>
+        <width>301</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>20</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="averageAttentionLevel_widget_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>451</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,255);
+border-radius:38px;</string>
+      </property>
+     </widget>
+     <zorder>averageAttentionLevel_widget_3</zorder>
+     <zorder>averageAttentionLevelTitle_label</zorder>
+     <zorder>averageAttentionLevel_label</zorder>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>10</y>
+       <width>490</width>
+       <height>2</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(64,64,64);
+border-radius:5px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QWidget" name="unifromPieChartBGwidget_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1020</x>
+       <y>30</y>
+       <width>501</width>
+       <height>701</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 63, 121,150);
+border-radius:38px;</string>
+     </property>
+     <widget class="QWidget" name="unifromPieChartwidget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>481</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,255);
+border-radius:38px;</string>
+      </property>
+      <widget class="QTableWidget" name="reportAttendance_tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>70</y>
+         <width>441</width>
+         <height>611</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255,200);</string>
+       </property>
+       <column>
+        <property name="text">
+         <string>Student Name</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Time</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>In uniform</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLabel" name="registeredStudents_label_2">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>20</y>
+         <width>281</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Poppins Medium</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+       </property>
+       <property name="text">
+        <string>Students who have registered</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>60</y>
+         <width>400</width>
+         <height>2</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>1</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(64,64,64);
+border-radius:5px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="mainTopBarTitle_label_5">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>530</y>
+       <width>91</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>18</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>ScMS</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="mainScreenDark_BG_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,0);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>mainScreen_BG_3</zorder>
+   <zorder>mainScreenDark_BG_3</zorder>
+   <zorder>topBar_widget_3</zorder>
+   <zorder>mainDashboardContainer_widget_3</zorder>
+  </widget>
   <zorder>welcomeScreen_widget</zorder>
-  <zorder>dataEntry_widget</zorder>
-  <zorder>mainManagerScreen_widget</zorder>
-  <zorder>homeManagerScreen_widget</zorder>
   <zorder>loginScreen_widget</zorder>
+  <zorder>sessionReportScreen_widget</zorder>
+  <zorder>NewSessionScreen_widget</zorder>
+  <zorder>dataEntry_widget</zorder>
+  <zorder>homeManagerScreen_widget</zorder>
  </widget>
  <resources>
   <include location="res.qrc"/>
