@@ -1,4 +1,6 @@
 # from PyQt5 import QtCore, QtGui, QtWidgets
+import os
+
 from PyQt5 import uic
 from PyQt5 import pyrcc
 from uis import res

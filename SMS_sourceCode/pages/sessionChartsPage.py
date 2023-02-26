@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtChart import QChart, QChartView, QPieSeries
 class sessionChartsPage():
-    def __init__(self,mainSelf):
+    def __init__(self, mainSelf):
         self.mainSelf = mainSelf
 
         self.GUI_initialize_Objects()

@@ -1,14 +1,13 @@
 import pyrebase
 
 firebaseConfig = {
-    "apiKey": "AIzaSyA8cAWq-4TfLMhJkrr0M865S8ua8ms2DKQ",
-    "authDomain": "scms-f6376.firebaseapp.com",
-    "databaseURL": "https://scms-f6376-default-rtdb.firebaseio.com/",
-    "projectId": "scms-f6376",
-    "storageBucket": "scms-f6376.appspot.com",
-    "messagingSenderId": "90321163000",
-    "appId": "1:90321163000:web:ca87e7c9647573e947a10d",
-    "measurementId": "G-1W55SEG7XJ"
+    "apiKey": "AIzaSyAQG_KmhFcIzDT90Oj9i9uaKNCE1kM-TqQ",
+  "authDomain": "fir-course-eb838.firebaseapp.com",
+  "projectId": "fir-course-eb838",
+  "storageBucket": "fir-course-eb838.appspot.com",
+  "messagingSenderId": "513264369969",
+  "appId": "1:513264369969:web:0d0a3123d5e4eb572ab010",
+  "databaseURL": "https://fir-course-eb838-default-rtdb.europe-west1.firebasedatabase.app/"
 }
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
