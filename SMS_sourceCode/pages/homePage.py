@@ -2,9 +2,8 @@ from general_lib import *
 from pages.newSessionPage import *
 
 class homePage():
-    def __init__(self,mainSelf):
+    def __init__(self, mainSelf):
         self.mainSelf = mainSelf
-
         self.GUI_initialize_Objects()
         self.GUI_connect_buttons()
 
@@ -30,6 +29,8 @@ class homePage():
         destinationPageObj = self.mainSelf.findChild(QtWidgets.QWidget, destinationPage)
         destinationPageObj.show()
         destinationPageObj.raise_()
+        # get logged in user data
+        #getUser(email)
 
     def startNewSession_btn_clicked(self):
         self.mainSelf.newSessionPage = newSessionPage(self.mainSelf)

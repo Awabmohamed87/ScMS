@@ -11,14 +11,19 @@ firebaseConfig = {
 }
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
+db = firebase.database()
+
+def getUser(email):
+    user = db.child("Students").order_by_child("Email").equal_to(email).get()
+    print(user.val())
+    return user
 
 def login(email, password):
     try:
-        auth.sign_in_with_email_and_password(str(email),str(password))
+        auth.sign_in_with_email_and_password(str(email), str(password))
         print("LoggedIn Successfully")
         return True
     except:
-        print("Invalid userName or password")
         return False
 
 def createUserAccount(email, password):

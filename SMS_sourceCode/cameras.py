@@ -18,7 +18,7 @@ class Cameras_Worker(QThread):
 
     def initiate_Session(self, mainSelf):
         self.mainSelf = mainSelf
-        self.Capture = cv2.VideoCapture(1)
+        self.Capture = cv2.VideoCapture(0)
         self.all_Students = [[],[],[]]
         self.face_locations = []
         self.LiveView = True
