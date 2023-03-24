@@ -11,6 +11,7 @@ import concurrent.futures
 import mediapipe as mp
 import numpy as np
 import copy
+import tensorflow as tf
 
 class Cameras_Worker(QThread):
     ImageUpdate = pyqtSignal(QImage)
@@ -25,6 +26,8 @@ class Cameras_Worker(QThread):
         self.takingAttendance = False
         self.measureAttention=False
         self.fr = FaceRecognition()
+        # -------- load Yawn model --------
+        self.YawnCNN = tf.keras.models.load_model('YawnModel')
         #-------- Object init --------
         self.sessionTime_label = self.mainSelf.findChild(QLabel, "sessionTime_label")
         self.recordingImage_Label = self.mainSelf.findChild(QLabel, "recordingImage_Label")
@@ -78,11 +81,11 @@ class Cameras_Worker(QThread):
                 processFrame += 1
                 if processFrame==4:
                     processFrame=0
-                end = time.time()
-                totalTime = end - start
-                fps = 1 / totalTime
-                if processFrame==1:
-                    print("FPS: ", fps)
+                # end = time.time()
+                # totalTime = end - start
+                # fps = 1 / totalTime
+                # if processFrame==1:
+                #     print("FPS: ", fps)
             if not self.LiveView and self.takingAttendance and self.ThreadActive:
                 self.cameraAttendance_Label.hide()
                 self.recordingImage_Label.show()
@@ -125,9 +128,15 @@ class Cameras_Worker(QThread):
                 for (top, right, bottom, left) in self.face_locations:
                     margen = int((right - left) / 4)
                     roi_color = self.attentionImg[max((top - margen),0):bottom + margen, max((left - margen),0):right + margen]
-                    image = cv2.resize(roi_color, (128, 128))
+
+                    image = cv2.cvtColor(roi_color, cv2.COLOR_BGR2RGB)
+
+                    # ------- Yawn Detection Model -------
+                    self.track_students_Yawn(image)
+
+                    image = cv2.resize(image, (128, 128))
                     # image = cv2.cvtColor(cv2.flip(image, 1), cv2.COLOR_BGR2RGB)
-                    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
                     # To improve performance
                     image.flags.writeable = False
                     # Get the result
@@ -215,6 +224,24 @@ class Cameras_Worker(QThread):
                     # print(temp_avg_attentionLevel)
                 time.sleep(1)
                 self.measureAttention=False
+
+    def track_students_Yawn(self,face):
+        # cv2.imwrite("tessst/xad.jpg", face)
+        images = []
+
+        # image = cv2.cvtColor(face, cv2.COLOR_BGR2RGB)
+        image = cv2.resize(face, (224, 224))
+        images.append(image)
+
+        images = np.array(images, dtype='float32')
+        images = images / 255.
+        results = self.YawnCNN.predict(images)
+
+        for i in results:
+            if np.argmax(i) == 0:
+                print("No Yawn", i[0], '%')
+            else:
+                print("Yawn", i[1], '%')
 
     def detect_Student_uniform(self, frame, facesLocations):
         print('uniform')

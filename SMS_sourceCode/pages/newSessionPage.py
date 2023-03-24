@@ -1,5 +1,5 @@
 from general_lib import *
-from Cameras import *
+from cameras import *
 
 class newSessionPage():
     def __init__(self,mainSelf):
