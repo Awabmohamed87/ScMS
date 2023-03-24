@@ -2,6 +2,7 @@ from general_lib import *
 from pages.newSessionPage import *
 
 class homePage():
+    currentUser = {}
     def __init__(self, mainSelf):
         self.mainSelf = mainSelf
         self.GUI_initialize_Objects()
@@ -16,6 +17,11 @@ class homePage():
         self.startNewSession_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "startNewSession_btn")
         self.sessionsHistory_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "sessionsHistory_btn")
         self.homeLogout_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "homeLogout_btn")
+
+    def setCurrentUser(user):
+        print("-------------")
+        currentUser = user.val()
+        print(currentUser)
 
     def GUI_connect_buttons(self):
         self.startNewSession_btn.clicked.connect(self.startNewSession_btn_clicked)

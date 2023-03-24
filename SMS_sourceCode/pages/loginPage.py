@@ -1,5 +1,5 @@
 from general_lib import *
-
+from pages.homePage import homePage
 
 class loginPage():
     def __init__(self, mainSelf):
@@ -51,7 +51,8 @@ class loginPage():
         loginUserName_tbox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginUserName_tbox")
         loginPassword_tbox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginPassword_tbox")
         if login(loginUserName_tbox.text(), loginPassword_tbox.text()):
-            getUser(loginUserName_tbox.text())
+
+            homePage.setCurrentUser(getUser(loginUserName_tbox.text()))
             self.navigate("loginScreen_widget", "homeManagerScreen_widget")
             # Reset fields
             login_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "login_btn")
