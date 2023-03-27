@@ -29,8 +29,6 @@ class Window(QtWidgets.QWidget):
         self.homePage = homePage(self)
         self.sessionChartsPage = sessionChartsPage(self)
 
-        self.dataEntry_widget = self.findChild(QtWidgets.QWidget, "dataEntry_widget")
-
 
     # action #1
     def mousePressEvent(self, event):

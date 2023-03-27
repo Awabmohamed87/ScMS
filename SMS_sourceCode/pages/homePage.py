@@ -1,5 +1,6 @@
 from general_lib import *
 from pages.newSessionPage import *
+from pages.sessionsHistoryPage import *
 
 class homePage():
     currentUser = {}
@@ -44,7 +45,8 @@ class homePage():
 
 
     def sessionsHistory_btn_clicked(self):
-        self.navigate("homeManagerScreen_widget", "dataEntry_widget")
+        self.mainSelf.sessionsHistoryPage = sessionsHistoryPage(self.mainSelf)
+        # self.navigate("homeManagerScreen_widget", "dataEntry_widget")
 
     def homeLogout_btn_clicked(self):
         self.navigate("homeManagerScreen_widget", "welcomeScreen_widget")
