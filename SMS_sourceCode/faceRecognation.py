@@ -1,4 +1,5 @@
-import os, sys
+import os
+import sys
 import cv2
 import numpy as np
 import math
@@ -30,8 +31,8 @@ class FaceRecognition:
         self.encode_faces()
 
     def encode_faces(self):
-        newFaces=0
-        existingFaces=0
+        newFaces = 0
+        existingFaces = 0
         if os.path.exists(self.known_face_encodings_List):
             self.known_face_encodings = list(np.load(self.known_face_encodings_List, allow_pickle=True))
             self.known_face_names = list(np.load(self.known_face_names_List, allow_pickle=True))
@@ -42,7 +43,7 @@ class FaceRecognition:
                 face_encoding = face_recognition.face_encodings(face_image)[0]
                 self.known_face_encodings.append(face_encoding)
                 self.known_face_names.append(image)
-                newFaces+=1
+                newFaces += 1
             else:
                 existingFaces += 1
 
