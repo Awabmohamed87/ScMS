@@ -15,6 +15,7 @@ class loginPage():
         # ------------ Buttons ------------
         # ----- Login page -----
         self.loginHome_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "loginHome_btn")
+        self.loginExit_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "loginExit_btn")
         self.login_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "login_btn")
 
         self.loginUserName_tbox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginUserName_tbox")
@@ -30,6 +31,7 @@ class loginPage():
 
     def GUI_connect_buttons(self):
         self.loginHome_btn.clicked.connect(self.home_btn_clicked)
+        self.loginExit_btn.clicked.connect(self.loginExit_btn_clicked)
         self.login_btn.clicked.connect(self.login_btn_clicked)
 
     # ------------------- Buttons Clicked -------------------
@@ -45,6 +47,8 @@ class loginPage():
 
     def home_btn_clicked(self):
         self.navigate("loginScreen_widget", "welcomeScreen_widget")
+    def loginExit_btn_clicked(self):
+        self.mainSelf.close()
 
     # ------------------- Login Handler -------------------
     def login_handling(self):
