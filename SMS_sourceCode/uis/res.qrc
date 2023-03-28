@@ -13,6 +13,7 @@
     <file>materials/welcomeScreen.png</file>
   </qresource>
   <qresource prefix="icons">
+    <file>materials/icons/tea-timeAnim.gif</file>
     <file>materials/icons/tea-time.png</file>
     <file>materials/icons/attention.png</file>
     <file>materials/icons/record.png</file>

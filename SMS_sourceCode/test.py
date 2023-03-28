@@ -1,47 +1,99 @@
-import random
-from PyQt5 import QtWidgets, QtGui, QtCore
-# ksize = (10, 10)
-# Image = cv2.blur(Image, ksize, cv2.BORDER_DEFAULT)
 
-import cv2
-import mediapipe as mp
-import time
-mp_face_detection = mp.solutions.face_detection
-mp_drawing = mp.solutions.drawing_utils
+from PyQt5.QtCore import Qt, QUrl
+from PyQt5.QtGui import QMovie, QIcon
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel,QPushButton
+from PyQt5.QtCore import QByteArray
+
+from PyQt5.QtWidgets import QApplication, QPushButton, QLabel
+from PyQt5.QtGui import QMovie
+from PyQt5.QtCore import Qt
+
+app = QApplication([])
+
+# Create a push button
+push_button = QPushButton("Click me!")
+
+# Create a label to display the GIF
+gif_label = QLabel()
+
+# Load the GIF
+gif_movie = QMovie("uis/materials/icons/tea-timeAnim.gif")
+
+# Set the movie to the label
+gif_label.setMovie(gif_movie)
+
+# Start the animation
+gif_movie.start()
+
+# Set the label as the icon of the push button
+push_button.setIcon(gif_label)
+
+# Set the size and alignment of the icon
+push_button.setIconSize(gif_label.sizeHint())
+push_button.setIconAlignment(Qt.AlignCenter)
+
+# Show the push button
+push_button.show()
+
+app.exec_()
 
 
-#For webcam input:
-cap = cv2.VideoCapture(0)
-#For Video input:
-#cap = cv2.VideoCapture("1.mp4")
-prevTime = 0
-with mp_face_detection.FaceDetection(model_selection=1) as face_detection:
-  while True:
-    success, image = cap.read()
-    if not success:
-      print("Ignoring empty camera frame.")
-      break
 
-    #Convert the BGR image to RGB.
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    image.flags.writeable = False
-    results = face_detection.process(image)
 
-    # Draw the face detection annotations on the image.
-    image.flags.writeable = True
-    image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-    if results.detections:
-      for detection in results.detections:
-        mp_drawing.draw_detection(image, detection)
 
-    currTime = time.time()
-    fps = 1 / (currTime - prevTime)
-    prevTime = currTime
-    cv2.putText(image, f'FPS: {int(fps)}', (20, 70), cv2.FONT_HERSHEY_PLAIN, 3, (0, 196, 255), 2)
-    cv2.imshow('BlazeFace Face Detection', image)
-    if cv2.waitKey(5) & 0xFF == 27:
-      break
-cap.release()
+
+
+
+
+
+
+
+
+
+# import random
+# from PyQt5 import QtWidgets, QtGui, QtCore
+# # ksize = (10, 10)
+# # Image = cv2.blur(Image, ksize, cv2.BORDER_DEFAULT)
+#
+# import cv2
+# import mediapipe as mp
+# import time
+# mp_face_detection = mp.solutions.face_detection
+# mp_drawing = mp.solutions.drawing_utils
+#
+#
+# #For webcam input:
+# cap = cv2.VideoCapture(0)
+# #For Video input:
+# #cap = cv2.VideoCapture("1.mp4")
+# prevTime = 0
+# with mp_face_detection.FaceDetection(model_selection=1) as face_detection:
+#   while True:
+#     success, image = cap.read()
+#     if not success:
+#       print("Ignoring empty camera frame.")
+#       break
+#
+#     #Convert the BGR image to RGB.
+#     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+#     image.flags.writeable = False
+#     results = face_detection.process(image)
+#
+#     # Draw the face detection annotations on the image.
+#     image.flags.writeable = True
+#     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+#     if results.detections:
+#       for detection in results.detections:
+#         mp_drawing.draw_detection(image, detection)
+#
+#     currTime = time.time()
+#     fps = 1 / (currTime - prevTime)
+#     prevTime = currTime
+#     cv2.putText(image, f'FPS: {int(fps)}', (20, 70), cv2.FONT_HERSHEY_PLAIN, 3, (0, 196, 255), 2)
+#     cv2.imshow('BlazeFace Face Detection', image)
+#     if cv2.waitKey(5) & 0xFF == 27:
+#       break
+# cap.release()
 
 
 
