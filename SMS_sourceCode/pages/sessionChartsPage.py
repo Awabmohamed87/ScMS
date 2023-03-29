@@ -26,7 +26,9 @@ class sessionChartsPage():
 
         # ------------ Buttons ------------
         self.save_backHome_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "save_backHome_btn")
+        self.save_backHome_btn.setFocusPolicy(Qt.NoFocus)
         self.reportSave_exit_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "reportSave_exit_btn")
+        self.reportSave_exit_btn.setFocusPolicy(Qt.NoFocus)
 
     def GUI_connect_buttons(self):
         self.save_backHome_btn.clicked.connect(self.save_backHome_btn_clicked)
