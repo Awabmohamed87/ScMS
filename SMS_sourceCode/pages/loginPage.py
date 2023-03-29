@@ -12,6 +12,16 @@ class loginPage():
         # ------------ Pages ------------
         self.loginScreen_widget = self.mainSelf.findChild(QtWidgets.QWidget, "loginScreen_widget")
 
+        # ------------ Icons ------------
+        self.fingerPrintIcon_Label = self.mainSelf.findChild(QtWidgets.QWidget, "fingerPrintIcon_Label")
+        # Load the GIF using QMovie
+        self.movie = QMovie("uis/materials/icons/fingerprint.gif", QByteArray(), self.mainSelf)
+
+        # Set the size of the QMovie to be the same as the QLabel
+        self.movie.setScaledSize(self.fingerPrintIcon_Label.size())
+        self.fingerPrintIcon_Label.setMovie(self.movie)
+        self.movie.start()
+
         # ------------ Buttons ------------
         # ----- Login page -----
         self.loginHome_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "loginHome_btn")
@@ -55,6 +65,8 @@ class loginPage():
         loginUserName_tbox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginUserName_tbox")
         loginPassword_tbox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginPassword_tbox")
         if login(loginUserName_tbox.text(), loginPassword_tbox.text()):
+            # Create an object of Home Page
+            self.homePage = homePage(self.mainSelf)
 
             homePage.setCurrentUser(getUser(loginUserName_tbox.text()))
             self.navigate("loginScreen_widget", "homeManagerScreen_widget")

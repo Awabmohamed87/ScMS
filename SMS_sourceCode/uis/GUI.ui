@@ -226,6 +226,22 @@ background-color: rgba(197, 71, 91,220);
      <string>Exit</string>
     </property>
    </widget>
+   <widget class="QLabel" name="ScMS_Icon_Label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>120</y>
+      <width>90</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255,0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QWidget" name="loginScreen_widget" native="true">
    <property name="geometry">
@@ -425,6 +441,22 @@ background-color: rgba(229, 108, 120,220);
     </property>
     <property name="text">
      <string>Exit</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fingerPrintIcon_Label">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>630</y>
+      <width>150</width>
+      <height>150</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255,0);</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
@@ -1158,7 +1190,7 @@ border-radius:20px;</string>
        <string/>
       </property>
      </widget>
-     <widget class="QLabel" name="recordingImage_Label">
+     <widget class="QLabel" name="waitingImage_Label">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -1179,6 +1211,22 @@ border-radius:20px;</string>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="breakAnimation_Label">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>450</width>
+        <height>450</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);</string>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </widget>
@@ -2900,12 +2948,12 @@ border-radius:38px;</string>
    <zorder>topBar_widget_3</zorder>
    <zorder>mainDashboardContainer_widget_3</zorder>
   </widget>
-  <zorder>welcomeScreen_widget</zorder>
-  <zorder>loginScreen_widget</zorder>
   <zorder>sessionReportScreen_widget</zorder>
-  <zorder>NewSessionScreen_widget</zorder>
   <zorder>dataEntry_widget</zorder>
   <zorder>homeManagerScreen_widget</zorder>
+  <zorder>welcomeScreen_widget</zorder>
+  <zorder>loginScreen_widget</zorder>
+  <zorder>NewSessionScreen_widget</zorder>
  </widget>
  <resources>
   <include location="res.qrc"/>

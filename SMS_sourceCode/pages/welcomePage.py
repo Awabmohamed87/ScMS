@@ -1,5 +1,5 @@
 from general_lib import *
-
+from pages.loginPage import *
 class welcomePage():
     def __init__(self,mainSelf):
         self.mainSelf = mainSelf
@@ -12,6 +12,16 @@ class welcomePage():
         # ------------ Pages ------------
         self.welcomeScreen_widget = self.mainSelf.findChild(QtWidgets.QWidget, "welcomeScreen_widget")
         self.welcomeScreen_widget.raise_()
+
+        # # ------------ Icons ------------
+        # self.ScMS_Icon_Label = self.mainSelf.findChild(QtWidgets.QWidget, "ScMS_Icon_Label")
+        # # Load the GIF using QMovie
+        # self.movie = QMovie("uis/materials/icons/ScMS_icon.gif", QByteArray(), self.mainSelf)
+        #
+        # # Set the size of the QMovie to be the same as the QLabel
+        # self.movie.setScaledSize(self.ScMS_Icon_Label.size())
+        # self.ScMS_Icon_Label.setMovie(self.movie)
+        # self.movie.start()
 
         # ------------ Buttons ------------
         # ----- Welcome Page -----
@@ -30,6 +40,7 @@ class welcomePage():
         destinationPageObj.show()
         destinationPageObj.raise_()
     def getStarted_btn_clicked(self):
+        self.loginPage = loginPage(self.mainSelf)
         self.navigate("welcomeScreen_widget", "loginScreen_widget")
 
     def welcomeExit_btn_clicked(self):

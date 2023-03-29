@@ -51,14 +51,18 @@ class newSessionPage():
     def startBreak_btn_clicked(self):
         if self.sessionCameras_Worker.LiveView:
             self.sessionCameras_Worker.cameraAttendance_Label.hide()
-            self.sessionCameras_Worker.recordingImage_Label.show()
+            # self.sessionCameras_Worker.waitingImage_Label.show()
+            self.sessionCameras_Worker.movie.start()
+            self.sessionCameras_Worker.breakAnimation_Label.show()
             self.sessionCameras_Worker.LiveView=False
             self.sessionCameras_Worker.measureAttention=False
             self.startBreak_btn.setText(" Continue")
         else:
             self.sessionCameras_Worker.LiveView = True
             self.startBreak_btn.setText(" Start a break")
-            self.sessionCameras_Worker.recordingImage_Label.hide()
+            self.sessionCameras_Worker.waitingImage_Label.hide()
+            self.sessionCameras_Worker.movie.stop()
+            self.sessionCameras_Worker.breakAnimation_Label.hide()
             self.sessionCameras_Worker.cameraAttendance_Label.show()
 
     def navigate(self, currnetPage, destinationPage):

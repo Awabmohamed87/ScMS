@@ -12,7 +12,8 @@ import mediapipe as mp
 import numpy as np
 import copy
 import tensorflow as tf
-
+from PyQt5.QtGui import QMovie
+from PyQt5.QtCore import QByteArray
 class Cameras_Worker(QThread):
     ImageUpdate = pyqtSignal(QImage)
 
@@ -30,12 +31,22 @@ class Cameras_Worker(QThread):
         self.YawnCNN = tf.keras.models.load_model('YawnModel')
         #-------- Object init --------
         self.sessionTime_label = self.mainSelf.findChild(QLabel, "sessionTime_label")
-        self.recordingImage_Label = self.mainSelf.findChild(QLabel, "recordingImage_Label")
-        self.recordingImage_Label.hide()
+        self.waitingImage_Label = self.mainSelf.findChild(QLabel, "waitingImage_Label")
+        self.waitingImage_Label.hide()
         self.studentsAttendance_tableWidget = self.mainSelf.findChild(QTableWidget, "studentsAttendance_tableWidget")
         self.cameraAttendance_Label = self.mainSelf.findChild(QLabel, "cameraAttendance_Label")
         self.cameraAttendance_Label.show()
         self.currentAvgAttention_label = self.mainSelf.findChild(QLabel, "currentAvgAttention_label")
+        # ------------ Icons ------------
+        self.breakAnimation_Label = self.mainSelf.findChild(QLabel, "breakAnimation_Label")
+        # Load the GIF using QMovie
+        self.movie = QMovie("uis/materials/icons/break_animation2.gif", QByteArray(), self.mainSelf)
+
+        # Set the size of the QMovie to be the same as the QLabel
+        self.movie.setScaledSize(self.breakAnimation_Label.size())
+        self.breakAnimation_Label.setMovie(self.movie)
+        # self.movie.start()
+        self.breakAnimation_Label.hide()
         #-------- Start Session Timer --------
         self.counter = 0
         self.timer = QTimer(self.mainSelf)
@@ -88,9 +99,9 @@ class Cameras_Worker(QThread):
                 #     print("FPS: ", fps)
             if not self.LiveView and self.takingAttendance and self.ThreadActive:
                 self.cameraAttendance_Label.hide()
-                self.recordingImage_Label.show()
+                self.waitingImage_Label.show()
                 self.recordAttendance()
-                self.recordingImage_Label.hide()
+                self.waitingImage_Label.hide()
                 self.cameraAttendance_Label.show()
                 self.LiveView= True
                 self.takingAttendance=False

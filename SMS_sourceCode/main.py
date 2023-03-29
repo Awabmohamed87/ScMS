@@ -16,7 +16,6 @@ class Window(QtWidgets.QWidget):
         uic.loadUi("uis\GUI.ui",self)
         self.GUI_initialize_properities()
         self.GUI_initialize_Pages()
-        print("adnan")
 
     def GUI_initialize_properities(self):
         self.setWindowIcon(QIcon("uis\materials\systemLogo.png"))
@@ -26,8 +25,6 @@ class Window(QtWidgets.QWidget):
     def GUI_initialize_Pages(self):
         # ------------ Pages ------------
         self.welcomePage = welcomePage(self)
-        self.loginPage = loginPage(self)
-        self.homePage = homePage(self)
         self.sessionChartsPage = sessionChartsPage(self)
 
 
