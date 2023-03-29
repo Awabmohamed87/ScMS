@@ -26,6 +26,10 @@ class loginPage():
         # ----- Login page -----
         self.loginHome_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "loginHome_btn")
         self.loginExit_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "loginExit_btn")
+
+        #set home page label
+        self.currentUserNameLabel = self.mainSelf.findChild(QtWidgets.QLabel, "homeUserName_label")
+
         self.login_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "login_btn")
         self.login_btn.setFocusPolicy(Qt.NoFocus)
 
@@ -68,8 +72,9 @@ class loginPage():
         if login(loginUserName_tbox.text(), loginPassword_tbox.text()):
             # Create an object of Home Page
             self.homePage = homePage(self.mainSelf)
+            self.homePage.setCurrentUser(getUser(loginUserName_tbox.text()))
+            #self.currentUserNameLabel.setText(userName)
 
-            homePage.setCurrentUser(getUser(loginUserName_tbox.text()))
             self.navigate("loginScreen_widget", "homeManagerScreen_widget")
             # Reset fields
             login_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "login_btn")

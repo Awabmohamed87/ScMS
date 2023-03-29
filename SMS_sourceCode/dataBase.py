@@ -16,18 +16,14 @@ db = firebase.database()
 def getUser(email):
     user = db.child("USERS").order_by_child("Email").equal_to(email).get()
     for row in user.each():
-        print(int(row.val()['ROLE']))
         if int(row.val()['ROLE']) == 4:
-            print("YES")
             var = db.child("Students").order_by_child("Email").equal_to(email).get()
-            print(var)
+            print(var.val())
         elif int(row.val()['ROLE']) == 3:
-            print("NO")
             var = db.child("TEACHERS").order_by_child("Email").equal_to(email).get()
         break
 
-    print(var.val())
-    return var
+    return var[0].val()
 
 def login(email, password):
     try:

@@ -49,7 +49,7 @@ class FaceRecognition:
 
         np.save(self.known_face_encodings_List, self.known_face_encodings)
         np.save(self.known_face_names_List, self.known_face_names)
-        print('New Faces:',newFaces,'/ Existing Faces:',existingFaces)
+        print('New Faces:', newFaces, '/ Existing Faces:', existingFaces)
         print(self.known_face_names)
 
     def reset_encoded_faces(self):
@@ -58,7 +58,7 @@ class FaceRecognition:
         if os.path.exists(self.known_face_names_List):
             os.remove(self.known_face_names_List)
 
-    def run_recognition(self,frame):
+    def run_recognition(self, frame):
         # cv2.imwrite("xad.jpg", rgb_small_frame)
         # Resize frame of video to 1/4 size for faster face recognition processing
         small_frame = cv2.resize(frame, (0, 0), fx=self.frame_resize_factor, fy=self.frame_resize_factor)

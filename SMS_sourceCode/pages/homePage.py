@@ -3,7 +3,7 @@ from pages.newSessionPage import *
 from pages.sessionsHistoryPage import *
 
 class homePage():
-    currentUser = {}
+    currentUser = {'Name': '...'}
     def __init__(self, mainSelf):
         self.mainSelf = mainSelf
         self.GUI_initialize_Objects()
@@ -11,21 +11,28 @@ class homePage():
 
     def GUI_initialize_Objects(self):
         # ------------ Pages ------------
-        self.homeManagerScreen_widget= self.mainSelf.findChild(QtWidgets.QWidget, "homeManagerScreen_widget")
+        self.homeManagerScreen_widget = self.mainSelf.findChild(QtWidgets.QWidget, "homeManagerScreen_widget")
 
         # ------------ Buttons ------------
         # ----- Home page -----
         self.startNewSession_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "startNewSession_btn")
         self.startNewSession_btn.setFocusPolicy(Qt.NoFocus)
+
         self.sessionsHistory_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "sessionsHistory_btn")
         self.sessionsHistory_btn.setFocusPolicy(Qt.NoFocus)
+
         self.homeLogout_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "homeLogout_btn")
         self.homeLogout_btn.setFocusPolicy(Qt.NoFocus)
 
-    def setCurrentUser(user):
-        print("-------------")
-        currentUser = user.val()
-        print(currentUser)
+        self.currentUserNameLabel = self.mainSelf.findChild(QtWidgets.QLabel, "homeUserName_label")
+
+
+    def setCurrentUser(self, user):
+        self.currentUser = user
+        self._setupPage()
+
+    def _setupPage(self):
+        self.currentUserNameLabel.setText(self.currentUser['Name'])
 
     def GUI_connect_buttons(self):
         self.startNewSession_btn.clicked.connect(self.startNewSession_btn_clicked)

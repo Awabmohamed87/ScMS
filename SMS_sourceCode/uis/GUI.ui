@@ -1867,47 +1867,6 @@ border-radius:38px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="homeUserImage_Label">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>316</y>
-      <width>100</width>
-      <height>100</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255,0);
-border-image: url(:/images/materials/Adnan.jpg);
-border-radius:35px;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="homeUserName_label">
-    <property name="geometry">
-     <rect>
-      <x>53</x>
-      <y>436</y>
-      <width>171</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Poppins Medium</family>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255,0);
-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Adnan Dalain</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="homeJobRole_label">
     <property name="geometry">
      <rect>
@@ -1929,6 +1888,9 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>4th year student</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QWidget" name="homeSideBar_widget" native="true">
@@ -1956,6 +1918,9 @@ border-bottom-left-radius:38px;</string>
      </property>
      <property name="text">
       <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
      </property>
     </widget>
     <widget class="QPushButton" name="personal_Information_btn">
@@ -2106,13 +2071,64 @@ background-color: rgba(237, 239, 254,100);
       </size>
      </property>
     </widget>
+    <widget class="QLabel" name="homeUserImage_Label">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>280</y>
+       <width>100</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+border-image: url(:/images/materials/Adnan.jpg);
+border-radius:35px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="homeUserName_label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>400</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Adnan Dalain Dalain Dalain Dalain</string>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
    <zorder>mainScreenwhite_BG</zorder>
    <zorder>homeTopBar_widget_2</zorder>
    <zorder>homeContainer_widget</zorder>
    <zorder>homeSideBar_widget</zorder>
-   <zorder>homeUserName_label</zorder>
-   <zorder>homeUserImage_Label</zorder>
    <zorder>homeJobRole_label</zorder>
   </widget>
   <widget class="QWidget" name="dataEntry_widget" native="true">
@@ -2950,10 +2966,10 @@ border-radius:38px;</string>
   </widget>
   <zorder>sessionReportScreen_widget</zorder>
   <zorder>dataEntry_widget</zorder>
-  <zorder>homeManagerScreen_widget</zorder>
   <zorder>welcomeScreen_widget</zorder>
   <zorder>loginScreen_widget</zorder>
   <zorder>NewSessionScreen_widget</zorder>
+  <zorder>homeManagerScreen_widget</zorder>
  </widget>
  <resources>
   <include location="res.qrc"/>
