@@ -17,13 +17,13 @@ def getUser(email):
     user = db.child("USERS").order_by_child("Email").equal_to(email).get()
     for row in user.each():
         if int(row.val()['ROLE']) == 4:
-            var = db.child("Students").order_by_child("Email").equal_to(email).get()
-            print(var.val())
+            print(row.key())
+            var = db.child("Students").child(row.key()).get()
         elif int(row.val()['ROLE']) == 3:
-            var = db.child("TEACHERS").order_by_child("Email").equal_to(email).get()
+            var = db.child("TEACHERS").child(row.key()).get()
         break
 
-    return var[0].val()
+    return var.val()
 
 def login(email, password):
     try:

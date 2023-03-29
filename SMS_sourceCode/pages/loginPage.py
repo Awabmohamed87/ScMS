@@ -27,9 +27,6 @@ class loginPage():
         self.loginHome_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "loginHome_btn")
         self.loginExit_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "loginExit_btn")
 
-        #set home page label
-        self.currentUserNameLabel = self.mainSelf.findChild(QtWidgets.QLabel, "homeUserName_label")
-
         self.login_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "login_btn")
         self.login_btn.setFocusPolicy(Qt.NoFocus)
 
