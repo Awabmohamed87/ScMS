@@ -20,9 +20,13 @@ class newSessionPage():
 
         # ------------ Buttons ------------
         # ----- New Session page -----
-        self.endSession_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "endSession_btn")
         self.attendanceRecord_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "attendanceRecord_btn")
+        self.attendanceRecord_btn.setFocusPolicy(Qt.NoFocus)
         self.startBreak_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "startBreak_btn")
+        self.startBreak_btn.setFocusPolicy(Qt.NoFocus)
+        self.endSession_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "endSession_btn")
+        self.endSession_btn.setFocusPolicy(Qt.NoFocus)
+        # ------------ Tabel ------------
         self.studentsAttendance_tableWidget = self.mainSelf.findChild(QtWidgets.QTableWidget, "studentsAttendance_tableWidget")
 
     def GUI_connect_buttons(self):
@@ -73,7 +77,6 @@ class newSessionPage():
         destinationPageObj.raise_()
 
     def endSession_btn_clicked(self):
-        #
         self.sessionCameras_Worker.end_Session()
         # Calculate session statistics & display Charts
         self.mainSelf.sessionChartsPage.displayCharts(self.sessionCameras_Worker)

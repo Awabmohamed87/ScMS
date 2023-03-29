@@ -15,6 +15,7 @@ class sessionsHistoryPage():
 
         # ------------ Buttons ------------
         self.dataEntryBack_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "dataEntryBack_btn")
+        self.dataEntryBack_btn.setFocusPolicy(Qt.NoFocus)
 
     def GUI_connect_buttons(self):
         self.dataEntryBack_btn.clicked.connect(self.dataEntryBack_btn_clicked)

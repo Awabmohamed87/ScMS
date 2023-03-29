@@ -16,8 +16,11 @@ class homePage():
         # ------------ Buttons ------------
         # ----- Home page -----
         self.startNewSession_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "startNewSession_btn")
+        self.startNewSession_btn.setFocusPolicy(Qt.NoFocus)
         self.sessionsHistory_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "sessionsHistory_btn")
+        self.sessionsHistory_btn.setFocusPolicy(Qt.NoFocus)
         self.homeLogout_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "homeLogout_btn")
+        self.homeLogout_btn.setFocusPolicy(Qt.NoFocus)
 
     def setCurrentUser(user):
         print("-------------")
