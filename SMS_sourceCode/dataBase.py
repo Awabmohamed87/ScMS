@@ -20,7 +20,11 @@ def getUser(email):
             print(row.key())
             var = db.child("Students").child(row.key()).get()
         elif int(row.val()['ROLE']) == 3:
-            var = db.child("TEACHERS").child(row.key()).get()
+            var = db.child("Teachers").child(row.key()).get()
+        elif int(row.val()['ROLE']) == 5:
+            continue
+        else:
+            var = db.child("Managers").child(row.key()).get()
         break
 
     return var.val()
