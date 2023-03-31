@@ -23,6 +23,8 @@ class sessionChartsPage():
         self.numOfStudents_label = self.mainSelf.findChild(QtWidgets.QLabel, "numOfStudents_label")
         self.reportSessionTime_label = self.mainSelf.findChild(QtWidgets.QLabel, "reportSessionTime_label")
 
+        # ------------ Tabel ------------
+        self.reportAttendance_tableWidget = self.mainSelf.findChild(QtWidgets.QTableWidget,"reportAttendance_tableWidget")
 
         # ------------ Buttons ------------
         self.save_backHome_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "save_backHome_btn")
@@ -82,6 +84,10 @@ class sessionChartsPage():
             self.avg_attentionLevel = int((sum(self.sessionInfo.avg_attentionLevel) / len(self.sessionInfo.avg_attentionLevel))*100)
             self.averageAttentionLevel_label.setText(str(self.avg_attentionLevel)+'%')
 
+        # Display & Count the number of students
+        self.numOfStudents_label.setText(str(len(sessionInfo.all_Students[0])))
+        self.fill_GUI_Tabel(sessionInfo)
+
         uniformCount=0
         notInUniformCount = 0
         for student_In_Uniform in self.sessionInfo.all_Students[2]:
@@ -101,6 +107,26 @@ class sessionChartsPage():
         slice.setBrush(QColor(33, 140, 116,160))
         slice = self.series.slices()[1]
         slice.setBrush(QColor(229, 108, 120,200))
+
+    def fill_GUI_Tabel(self, sessionInfo):
+        self.reportAttendance_tableWidget.setRowCount(0)
+        for i in range(len(sessionInfo.all_Students[0])):
+            # Get the current number of rows & Add a new row
+            row = self.reportAttendance_tableWidget.rowCount()
+            self.reportAttendance_tableWidget.insertRow(row)
+
+            # Add student_data to the new row
+            student_data = [sessionInfo.all_Students[0][i],sessionInfo.all_Students[1][i],sessionInfo.all_Students[2][i]]
+            for i, item in enumerate(student_data):
+                table_item = QTableWidgetItem(str(item))
+                # set Uniform statue text color
+                if i == 2 and item == True:
+                    table_item.setForeground(QBrush(QColor(255, 255, 255)))
+                    table_item.setBackground(QBrush(QColor(33, 140, 116,160)))
+                elif i == 2 and item == False:
+                    table_item.setForeground(QBrush(QColor(255, 255, 255)))
+                    table_item.setBackground(QBrush(QColor(229, 108, 120,200)))
+                self.reportAttendance_tableWidget.setItem(row, i, table_item)
 
     # ------------------- Buttons Clicked -------------------
     def navigate(self, currnetPage, destinationPage):

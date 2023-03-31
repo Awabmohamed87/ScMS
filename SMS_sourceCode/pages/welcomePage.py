@@ -28,6 +28,7 @@ class welcomePage():
         self.getStarted_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "getStarted_btn")
         self.getStarted_btn.setFocusPolicy(Qt.NoFocus)
         self.welcomeExit_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "welcomeExit_btn")
+        self.welcomeExit_btn.setFocusPolicy(Qt.NoFocus)
 
     def GUI_connect_buttons(self):
         self.getStarted_btn.clicked.connect(self.getStarted_btn_clicked)
