@@ -4,10 +4,14 @@ from pages.sessionsHistoryPage import *
 
 class homePage():
     currentUser = {'Name': '...'}
-    def __init__(self, mainSelf):
+    role = 1
+    def __init__(self, mainSelf, user, roleID):
         self.mainSelf = mainSelf
+        self.currentUser = user
+        self.role = roleID
         self.GUI_initialize_Objects()
         self.GUI_connect_buttons()
+        self._setupPage()
 
     def GUI_initialize_Objects(self):
         # ------------ Pages ------------
@@ -25,14 +29,14 @@ class homePage():
         self.homeLogout_btn.setFocusPolicy(Qt.NoFocus)
 
         self.currentUserNameLabel = self.mainSelf.findChild(QtWidgets.QLabel, "homeUserName_label")
+        self.homeRolelabel = self.mainSelf.findChild(QtWidgets.QLabel, "homeJobRole_label")
 
 
-    def setCurrentUser(self, user):
-        self.currentUser = user
-        self._setupPage()
+
 
     def _setupPage(self):
         self.currentUserNameLabel.setText(self.currentUser['Name'])
+        self.homeRolelabel.setText(mapRole(self.role))
 
     def GUI_connect_buttons(self):
         self.startNewSession_btn.clicked.connect(self.startNewSession_btn_clicked)

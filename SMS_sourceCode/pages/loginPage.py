@@ -68,9 +68,8 @@ class loginPage():
         loginPassword_tbox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginPassword_tbox")
         if login(loginUserName_tbox.text(), loginPassword_tbox.text()):
             # Create an object of Home Page
-            self.homePage = homePage(self.mainSelf)
-            self.homePage.setCurrentUser(getUser(loginUserName_tbox.text()))
-            #self.currentUserNameLabel.setText(userName)
+            user, id = getUser(loginUserName_tbox.text())
+            self.homePage = homePage(self.mainSelf, user, id)
 
             self.navigate("loginScreen_widget", "homeManagerScreen_widget")
             # Reset fields
