@@ -1338,6 +1338,11 @@ border-radius:38px;</string>
       <height>81</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(255, 255, 255,0);
 border-radius:20px;</string>
@@ -1610,7 +1615,7 @@ border-radius:20px;</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>50</y>
+        <y>60</y>
         <width>351</width>
         <height>21</height>
        </rect>
@@ -1635,13 +1640,13 @@ color: rgb(64, 64, 64);</string>
         <x>30</x>
         <y>20</y>
         <width>231</width>
-        <height>31</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Poppins Medium</family>
-        <pointsize>11</pointsize>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1650,6 +1655,16 @@ color: rgb(64, 64, 64);</string>
       </property>
       <property name="text">
        <string>Assigned Courses</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="CoursesList_widget">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>140</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
       </property>
      </widget>
     </widget>
