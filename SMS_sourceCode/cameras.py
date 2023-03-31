@@ -237,26 +237,27 @@ class Cameras_Worker(QThread):
                 self.measureAttention=False
 
     def track_students_Yawn(self,face):
-        # cv2.imwrite("tessst/xad.jpg", face)
-        images = []
-
-        # image = cv2.cvtColor(face, cv2.COLOR_BGR2RGB)
-        image = cv2.resize(face, (224, 224))
-        images.append(image)
-
-        images = np.array(images, dtype='float32')
-        images = images / 255.
-        results = self.YawnCNN.predict(images)
-
-        for i in results:
-            if np.argmax(i) == 0:
-                print("No Yawn", i[0], '%')
-            else:
-                print("Yawn", i[1], '%')
+        pass
+        # # cv2.imwrite("tessst/xad.jpg", face)
+        # images = []
+        #
+        # # image = cv2.cvtColor(face, cv2.COLOR_BGR2RGB)
+        # image = cv2.resize(face, (224, 224))
+        # images.append(image)
+        #
+        # images = np.array(images, dtype='float32')
+        # images = images / 255.
+        # results = self.YawnCNN.predict(images)
+        #
+        # for i in results:
+        #     if np.argmax(i) == 0:
+        #         print("No Yawn", i[0], '%')
+        #     else:
+        #         print("Yawn", i[1], '%')
 
     def detect_Student_uniform(self, frame, facesLocations):
         print('uniform')
-        uniformColorRange=[1,180]
+        uniformColorRange=[160,180]
 
         top = facesLocations[0]
         right = facesLocations[1]
