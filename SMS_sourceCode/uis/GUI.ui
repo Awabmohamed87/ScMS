@@ -2093,15 +2093,15 @@ border-radius:35px;</string>
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>400</y>
+       <y>390</y>
        <width>241</width>
-       <height>51</height>
+       <height>81</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Poppins Medium</family>
-       <pointsize>14</pointsize>
+       <pointsize>12</pointsize>
       </font>
      </property>
      <property name="acceptDrops">
