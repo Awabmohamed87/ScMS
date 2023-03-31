@@ -16,23 +16,26 @@ db = firebase.database()
 def getUser(email):
     user = db.child("USERS").order_by_child("Email").equal_to(email).get()
     for row in user.each():
-        print(int(row.val()['ROLE']))
         if int(row.val()['ROLE']) == 4:
-            print("YES")
-            var = db.child("Students").order_by_child("Email").equal_to(email).get()
-            print(var)
+            print(row.key())
+            var = db.child("Students").child(row.key()).get()
         elif int(row.val()['ROLE']) == 3:
-            print("NO")
-            var = db.child("TEACHERS").order_by_child("Email").equal_to(email).get()
+            var = db.child("Teachers").child(row.key()).get()
+        elif int(row.val()['ROLE']) == 5:
+            continue
+        else:
+            var = db.child("Managers").child(row.key()).get()
         break
 
-    print(var.val())
-    return var
+    return var.val(), int(row.val()['ROLE'])
+
+def mapRole(role):
+    r = db.child("ROLES").child(role).get()
+    return r.val()['ROLE']
 
 def login(email, password):
     try:
         auth.sign_in_with_email_and_password(str(email), str(password))
-        print("LoggedIn Successfully")
         return True
     except:
         return False
