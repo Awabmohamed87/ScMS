@@ -33,6 +33,10 @@ def mapRole(role):
     r = db.child("ROLES").child(role).get()
     return r.val()['ROLE']
 
+def getCourseName(courseID):
+    subject = db.child('Subjects').child(courseID).get()
+    return subject.val()['SubjectName']
+
 def login(email, password):
     try:
         auth.sign_in_with_email_and_password(str(email), str(password))

@@ -1,6 +1,7 @@
 from general_lib import *
 from pages.newSessionPage import *
 from pages.sessionsHistoryPage import *
+from PyQt5.QtWidgets import QLabel
 
 class homePage():
     currentUser = {'Name': '...'}
@@ -31,12 +32,20 @@ class homePage():
         self.currentUserNameLabel = self.mainSelf.findChild(QtWidgets.QLabel, "homeUserName_label")
         self.homeRolelabel = self.mainSelf.findChild(QtWidgets.QLabel, "homeJobRole_label")
 
+        self.coursesList = self.mainSelf.findChild(QtWidgets.QListWidget, "CoursesList_widget")
+        self.coursesList.clear()
 
-
+    def _createCoursesListItem(self, val):
+        return QListWidgetItem(val)
 
     def _setupPage(self):
         self.currentUserNameLabel.setText(self.currentUser['Name'])
         self.homeRolelabel.setText(mapRole(self.role))
+        list = self.currentUser['Subjects']
+        for i in list:
+            self.coursesList.addItem(self._createCoursesListItem(getCourseName(i)))
+
+
 
     def GUI_connect_buttons(self):
         self.startNewSession_btn.clicked.connect(self.startNewSession_btn_clicked)
