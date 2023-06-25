@@ -1,5 +1,6 @@
 from general_lib import *
 from pages.homePage import homePage
+from pages.FaceIDBiometricPage import FaceIDBiometric
 
 class loginPage():
     def __init__(self, mainSelf):
@@ -30,6 +31,8 @@ class loginPage():
         self.loginExit_btn.setFocusPolicy(Qt.NoFocus)
         self.login_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "login_btn")
         self.login_btn.setFocusPolicy(Qt.NoFocus)
+        self.faceRecognation_login_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "faceRecognation_login_btn")
+        self.faceRecognation_login_btn.setFocusPolicy(Qt.NoFocus)
 
         self.loginUserName_tbox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginUserName_tbox")
         self.loginUserName_tbox.textChanged.connect(self.onTextChanged)
@@ -46,6 +49,7 @@ class loginPage():
         self.loginHome_btn.clicked.connect(self.home_btn_clicked)
         self.loginExit_btn.clicked.connect(self.loginExit_btn_clicked)
         self.login_btn.clicked.connect(self.login_btn_clicked)
+        self.faceRecognation_login_btn.clicked.connect(self.faceRecognation_login_btn_clicked)
 
     # ------------------- Buttons Clicked -------------------
     def navigate(self, currnetPage, destinationPage):
@@ -60,8 +64,12 @@ class loginPage():
 
     def home_btn_clicked(self):
         self.navigate("loginScreen_widget", "welcomeScreen_widget")
+    def faceRecognation_login_btn_clicked(self):
+        self.FaceIDBiometric = FaceIDBiometric(self.mainSelf)
+        self.navigate("loginScreen_widget", "faceID_widget")
     def loginExit_btn_clicked(self):
         self.mainSelf.close()
+
 
     # ------------------- Login Handler -------------------
     def login_handling(self):

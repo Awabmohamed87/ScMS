@@ -1,3 +1,4 @@
+from config import *
 import sys
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -14,12 +15,13 @@ import copy
 import tensorflow as tf
 from PyQt5.QtGui import QMovie
 from PyQt5.QtCore import QByteArray
+from dataBase import *
 class Cameras_Worker(QThread):
     ImageUpdate = pyqtSignal(QImage)
 
     def initiate_Session(self, mainSelf):
         self.mainSelf = mainSelf
-        self.Capture = cv2.VideoCapture(0)
+        self.Capture = cv2.VideoCapture(cameraPort)
         self.all_Students = [[],[],[]]
         self.face_locations = []
         self.LiveView = True
@@ -114,8 +116,9 @@ class Cameras_Worker(QThread):
         for i in range(1):
             ret, frame = self.Capture.read()
             facesLocations ,currentStudents_Names = self.fr.run_recognition(frame)
-            for i, student_Name in enumerate(currentStudents_Names):
-                if student_Name != 'Unknown':
+            for i, student_ID in enumerate(currentStudents_Names):
+                if student_ID != 'Unknown':
+                    student_Name=getUserName_ByEmail(student_ID)
                     if student_Name not in self.all_Students[0]:
                         current_time = datetime.datetime.now().time().strftime("%H:%M:%S H/M/S")
                         student_Uniforms_status = self.detect_Student_uniform(frame, facesLocations[i])
