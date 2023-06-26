@@ -77,14 +77,15 @@ class FaceIDBiometric():
 
     def update_Timer(self):
         self.counter += 1
-        if self.counter==3:
+        if self.counter==1:
             self.faceID_recognize()
             self.movie.stop()
             self.movie.jumpToFrame(0)
             self.timer.stop()
 
     def faceID_recognize(self):
-        Capture = cv2.VideoCapture(cameraPort)
+
+        Capture = cv2.VideoCapture(self.mainSelf.configuration.faceIDCameraPort)
         _, frame = Capture.read()
         _, names = self.fr.run_recognition(frame)
 

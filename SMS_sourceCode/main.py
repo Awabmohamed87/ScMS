@@ -8,6 +8,7 @@ from pages.loginPage import *
 from pages.homePage import *
 from pages.newSessionPage import *
 from pages.sessionChartsPage import *
+from config import *
 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 
 class Window(QtWidgets.QWidget):
@@ -21,6 +22,8 @@ class Window(QtWidgets.QWidget):
         self.setWindowIcon(QIcon("uis\materials\systemLogo.png"))
         self.setWindowFlags(QtCore.Qt.WindowType.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.configuration= config(self)
+
 
     def GUI_initialize_Pages(self):
         # ------------ Pages ------------

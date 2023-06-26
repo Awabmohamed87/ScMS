@@ -1714,6 +1714,102 @@ color: rgb(64, 64, 64);</string>
       <string notr="true">background-color: rgba(255, 255, 255,230);
 border-radius:20px;</string>
      </property>
+     <widget class="QLabel" name="home_label_7">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>351</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>Student uniform settings</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="home_label_8">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>Uniform Configuration</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="uniformConfigure_btn">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>361</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#uniformConfigure_btn{
+	background-color: rgba(33, 140, 116,40);
+	color: rgb(33, 140, 116);
+border-radius:20px;
+}
+
+QPushButton#uniformConfigure_btn:hover{
+background-color: rgba(33, 140, 116,60);
+color: rgb(33, 140, 116);
+}
+
+QPushButton#uniformConfigure_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(33, 140, 116,60);
+color: rgb(33, 140, 116);
+}</string>
+      </property>
+      <property name="text">
+       <string> Unifrom Configure</string>
+      </property>
+      <property name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/icons/materials/icons/shirt.png</normaloff>:/icons/materials/icons/shirt.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="DashboardContainer_widget_15" native="true">
      <property name="geometry">
@@ -1728,6 +1824,102 @@ border-radius:20px;</string>
       <string notr="true">background-color: rgba(255, 255, 255,230);
 border-radius:20px;</string>
      </property>
+     <widget class="QPushButton" name="cameraConfigure_btn">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>124</y>
+        <width>361</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#cameraConfigure_btn{
+	background-color: rgba(33, 140, 116,40);
+	color: rgb(33, 140, 116);
+border-radius:20px;
+}
+
+QPushButton#cameraConfigure_btn:hover{
+background-color: rgba(33, 140, 116,60);
+color: rgb(33, 140, 116);
+}
+
+QPushButton#cameraConfigure_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(33, 140, 116,60);
+color: rgb(33, 140, 116);
+}</string>
+      </property>
+      <property name="text">
+       <string> Camera Configure</string>
+      </property>
+      <property name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/icons/materials/icons/digital-camera.png</normaloff>:/icons/materials/icons/digital-camera.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="home_label_9">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins Medium</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>Camera Configuration</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="home_label_10">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>351</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Poppins</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>Video input settings</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="DashboardContainer_widget_14" native="true">
      <property name="geometry">
@@ -1762,7 +1954,7 @@ border-radius:20px;</string>
 color: rgb(64, 64, 64);</string>
       </property>
       <property name="text">
-       <string>Everything related to students </string>
+       <string>Everything related to members</string>
       </property>
      </widget>
      <widget class="QLabel" name="home_label_3">
@@ -1785,7 +1977,7 @@ color: rgb(64, 64, 64);</string>
 color: rgb(64, 64, 64);</string>
       </property>
       <property name="text">
-       <string>Students Management</string>
+       <string>Members Management</string>
       </property>
      </widget>
      <widget class="QPushButton" name="addNewStudent_btn">
@@ -1826,7 +2018,7 @@ background-color: rgba(237, 172, 72,60);
 }</string>
       </property>
       <property name="text">
-       <string> Add new Student </string>
+       <string> Add new User</string>
       </property>
       <property name="icon">
        <iconset resource="res.qrc">
@@ -1877,7 +2069,7 @@ background-color: rgba(237, 172, 72,60);
 }</string>
       </property>
       <property name="text">
-       <string> Manage Students  </string>
+       <string> Manage Users</string>
       </property>
       <property name="icon">
        <iconset resource="res.qrc">
@@ -3298,13 +3490,1403 @@ border-radius:38px;</string>
    <zorder>topBar_widget_5</zorder>
    <zorder>mainDashboardContainer_widget_4</zorder>
   </widget>
-  <zorder>sessionReportScreen_widget</zorder>
+  <widget class="QWidget" name="newUser_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1575</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="mainScreen_BG_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/images/materials/reportBG.png);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="topBar_widget_6" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>1531</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+/*background-color: rgba(239, 174, 74,150);*/
+border-radius:20px;</string>
+    </property>
+    <widget class="QLabel" name="mainTopBarTitle_label_9">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>10</y>
+       <width>321</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins SemiBold</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>Register New User</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="newUser_Back_btn">
+     <property name="geometry">
+      <rect>
+       <x>1230</x>
+       <y>10</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#newUser_Back_btn{
+background-color: rgb(229, 108, 120);
+	color: rgb(230, 230, 230);
+border-radius:20px;
+}
+
+QPushButton#newUser_Back_btn:hover{
+background-color: rgba(229, 108, 120,220);
+}
+
+QPushButton#newUser_Back_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(229, 108, 120,220);
+}</string>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="mainDashboardContainer_widget_5" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>1531</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+border-radius:20px;</string>
+    </property>
+    <widget class="QPushButton" name="newUser_Save_btn">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>640</y>
+       <width>831</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#newUser_Save_btn{
+	
+	background-color: rgb(44, 62, 80);
+	color: rgb(255, 255, 255);
+border-radius:20px;
+}
+
+QPushButton#newUser_Save_btn:hover{
+background-color: rgba(44, 62, 80,210);
+
+}
+
+QPushButton#newUser_Save_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(44, 62, 80,210);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Register</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mainTopBarTitle_label_10">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>191</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>20</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+</string>
+     </property>
+     <property name="text">
+      <string>ScMS</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="cameraAttendanceContainer_widget_4" native="true">
+     <property name="geometry">
+      <rect>
+       <x>880</x>
+       <y>10</y>
+       <width>640</width>
+       <height>480</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(64, 64, 64,50);
+/*background-color: rgba(255,255,255,255);*/
+border-radius:20px;</string>
+     </property>
+     <widget class="QLabel" name="cameraAttendance_Label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>620</width>
+        <height>460</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+border-radius:20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="breakAnimation_Label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>611</width>
+        <height>461</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="res.qrc">:/images/materials/attendanceWaiting.png</pixmap>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLineEdit" name="loginPassword_tbox_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>300</y>
+       <width>821</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+border-bottom:2px solid rgb(64,64,64);
+color:rgpa(255,255,255,230);
+padding-bottom:7px;
+border-radius:0px;
+
+
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="loginUserName_tbox_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>120</y>
+       <width>821</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+border-radius:0px;
+border-bottom:2px solid rgb(64,64,64);
+color:rgpa(255,255,255,230);
+padding-bottom:7px;
+
+
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Full Name</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="loginPassword_tbox_3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>380</y>
+       <width>381</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+border-bottom:2px solid rgb(64,64,64);
+color:rgpa(255,255,255,230);
+padding-bottom:7px;
+border-radius:0px;
+
+
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Normal</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Address</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="loginUserName_tbox_3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>220</y>
+       <width>821</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+border-radius:0px;
+border-bottom:2px solid rgb(64,64,64);
+color:rgpa(255,255,255,230);
+padding-bottom:7px;
+
+
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Email</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="loginPassword_tbox_4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>470</y>
+       <width>381</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+border-bottom:2px solid rgb(64,64,64);
+color:rgpa(255,255,255,230);
+padding-bottom:7px;
+border-radius:0px;
+
+
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Normal</enum>
+     </property>
+     <property name="placeholderText">
+      <string>DOB: d/M/yyyy</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="loginUserName_tbox_4">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>380</y>
+       <width>381</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+border-radius:0px;
+border-bottom:2px solid rgb(64,64,64);
+color:rgpa(255,255,255,230);
+padding-bottom:7px;
+
+
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Phone Number</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="loginUserName_tbox_5">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>470</y>
+       <width>381</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+border-radius:0px;
+border-bottom:2px solid rgb(64,64,64);
+color:rgpa(255,255,255,230);
+padding-bottom:7px;
+
+
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Gender</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>560</y>
+       <width>821</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="currentSection">
+      <enum>QDateTimeEdit::DaySection</enum>
+     </property>
+     <property name="displayFormat">
+      <string>d/M/yyyy</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>false</bool>
+     </property>
+     <property name="date">
+      <date>
+       <year>2023</year>
+       <month>1</month>
+       <day>1</day>
+      </date>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="newUser_takePic_btn">
+     <property name="geometry">
+      <rect>
+       <x>880</x>
+       <y>520</y>
+       <width>631</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#newUser_takePic_btn{
+	
+	background-color: rgb(44, 62, 80);
+	color: rgb(255, 255, 255);
+border-radius:20px;
+}
+
+QPushButton#newUser_takePic_btn:hover{
+background-color: rgba(44, 62, 80,210);
+
+}
+
+QPushButton#newUser_takePic_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(44, 62, 80,210);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Take a picture</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="newUser_openImage_btn">
+     <property name="geometry">
+      <rect>
+       <x>880</x>
+       <y>640</y>
+       <width>631</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#newUser_openImage_btn{
+	
+	background-color: rgb(44, 62, 80);
+	color: rgb(255, 255, 255);
+border-radius:20px;
+}
+
+QPushButton#newUser_openImage_btn:hover{
+background-color: rgba(44, 62, 80,210);
+
+}
+
+QPushButton#newUser_openImage_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(44, 62, 80,210);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Open image file</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="mainScreenDark_BG_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,5);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>mainScreenDark_BG_6</zorder>
+   <zorder>mainScreen_BG_5</zorder>
+   <zorder>mainDashboardContainer_widget_5</zorder>
+   <zorder>topBar_widget_6</zorder>
+  </widget>
+  <widget class="QWidget" name="uniformConfig_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1575</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="mainScreen_BG_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/images/materials/dataEntryBG.png);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="topBar_widget_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>1351</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+/*background-color: rgba(239, 174, 74,150);*/
+border-radius:20px;</string>
+    </property>
+    <widget class="QLabel" name="mainTopBarTitle_label_6">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>10</y>
+       <width>431</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins SemiBold</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>Uniform Color Configuration</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="uniformConfig_Back_btn">
+     <property name="geometry">
+      <rect>
+       <x>1050</x>
+       <y>10</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#uniformConfig_Back_btn{
+background-color: rgb(229, 108, 120);
+	color: rgb(230, 230, 230);
+border-radius:20px;
+}
+
+QPushButton#uniformConfig_Back_btn:hover{
+background-color: rgba(229, 108, 120,220);
+}
+
+QPushButton#uniformConfig_Back_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(229, 108, 120,220);
+}</string>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="mainDashboardContainer_widget_6" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>1531</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+border-radius:20px;</string>
+    </property>
+    <widget class="QPushButton" name="unifromConfig_Save_btn">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>660</y>
+       <width>491</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#unifromConfig_Save_btn{
+	
+	background-color: rgb(235, 168, 105);
+	color: rgb(255, 255, 255);
+border-radius:20px;
+}
+
+QPushButton#unifromConfig_Save_btn:hover{
+background-color: rgba(245, 178, 115,210);
+
+}
+
+QPushButton#unifromConfig_Save_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(245, 178, 115,210);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Save</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mainTopBarTitle_label_11">
+     <property name="geometry">
+      <rect>
+       <x>1420</x>
+       <y>660</y>
+       <width>191</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>18</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+     </property>
+     <property name="text">
+      <string>ScMS</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="HSV_Colors_Container_widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>70</y>
+       <width>991</width>
+       <height>441</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(64, 64, 64,50);
+/*background-color: rgba(255,255,255,255);*/
+border-radius:20px;</string>
+     </property>
+     <widget class="QLabel" name="HSV_Image_Label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>971</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="res.qrc">:/images/materials/HSV.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLineEdit" name="mainUniformColor_tbox">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>150</y>
+       <width>371</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+border-bottom:2px solid rgb(64,64,64);
+color:rgpa(255,255,255,230);
+padding-bottom:7px;
+border-radius:0px;
+
+
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Normal</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Main Color (From 0 To 180)</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="seccondUniformColor_tbox_tbox">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>370</y>
+       <width>371</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+border-bottom:2px solid rgb(64,64,64);
+color:rgpa(255,255,255,230);
+padding-bottom:7px;
+border-radius:0px;
+
+
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Normal</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Optional - Second Color (0 To 180)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mainTopBarTitle_label_12">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>60</y>
+       <width>431</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins SemiBold</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>Color Configuration</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="mainScreenDark_BG_7">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,5);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>mainScreenDark_BG_7</zorder>
+   <zorder>mainScreen_BG_6</zorder>
+   <zorder>topBar_widget_4</zorder>
+   <zorder>mainDashboardContainer_widget_6</zorder>
+  </widget>
+  <widget class="QWidget" name="cameraConfig_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1575</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="mainScreen_BG_7">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/images/materials/reportBG.png);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="topBar_widget_7" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>1531</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+/*background-color: rgba(239, 174, 74,150);*/
+border-radius:20px;</string>
+    </property>
+    <widget class="QLabel" name="mainTopBarTitle_label_13">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>10</y>
+       <width>451</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins SemiBold</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>Camera Configuration</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cameraConfig_Back_btn">
+     <property name="geometry">
+      <rect>
+       <x>1230</x>
+       <y>10</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#cameraConfig_Back_btn{
+background-color: rgb(229, 108, 120);
+	color: rgb(230, 230, 230);
+border-radius:20px;
+}
+
+QPushButton#cameraConfig_Back_btn:hover{
+background-color: rgba(229, 108, 120,220);
+}
+
+QPushButton#cameraConfig_Back_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(229, 108, 120,220);
+}</string>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mainTopBarTitle_label_14">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>191</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>18</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+     </property>
+     <property name="text">
+      <string>ScMS</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="mainDashboardContainer_widget_7" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>1531</width>
+      <height>761</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+border-radius:20px;</string>
+    </property>
+    <widget class="QPushButton" name="cameraConfig_save_btn">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>660</y>
+       <width>1471</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton#cameraConfig_save_btn{
+	
+	background-color: rgb(44, 62, 80);
+	color: rgb(255, 255, 255);
+border-radius:20px;
+}
+
+QPushButton#cameraConfig_save_btn:hover{
+background-color: rgba(44, 62, 80,210);
+
+}
+
+QPushButton#cameraConfig_save_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(44, 62, 80,210);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Save</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QWidget" name="cameraAttendanceContainer_widget_5" native="true">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>640</width>
+       <height>480</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(64, 64, 64,50);
+/*background-color: rgba(255,255,255,255);*/
+border-radius:20px;</string>
+     </property>
+     <widget class="QLabel" name="sessionCameraConfig_Label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>620</width>
+        <height>460</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+border-radius:20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="cameraAttendanceContainer_widget_6" native="true">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>70</y>
+       <width>640</width>
+       <height>480</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(64, 64, 64,50);
+/*background-color: rgba(255,255,255,255);*/
+border-radius:20px;</string>
+     </property>
+     <widget class="QLabel" name="loginCameraConfig_Label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>620</width>
+        <height>460</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+border-radius:20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="mainTopBarTitle_label_15">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>10</y>
+       <width>311</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>20</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>Session Camera</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mainTopBarTitle_label_16">
+     <property name="geometry">
+      <rect>
+       <x>1040</x>
+       <y>10</y>
+       <width>281</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>20</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>Login Camera</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="changeSessionCamera_btn">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>570</y>
+       <width>641</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton#changeSessionCamera_btn{
+	
+	background-color: rgb(119, 141, 169);
+	color: rgb(255, 255, 255);
+border-radius:20px;
+}
+
+QPushButton#changeSessionCamera_btn:hover{
+background-color: rgba(119, 141, 169,210);
+
+}
+
+QPushButton#changeSessionCamera_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(119, 141, 169,210);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Change Session Camera</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="changeLoginCamera_btn">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>570</y>
+       <width>641</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#changeLoginCamera_btn{
+	
+	background-color: rgb(119, 141, 169);
+	color: rgb(255, 255, 255);
+border-radius:20px;
+}
+
+QPushButton#changeLoginCamera_btn:hover{
+background-color: rgba(119, 141, 169,210);
+
+}
+
+QPushButton#changeLoginCamera_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(119, 141, 169,210);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>Change Face-ID Camera</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="mainScreenDark_BG_8">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,5);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>mainScreenDark_BG_8</zorder>
+   <zorder>mainScreen_BG_7</zorder>
+   <zorder>topBar_widget_7</zorder>
+   <zorder>mainDashboardContainer_widget_7</zorder>
+  </widget>
   <zorder>welcomeScreen_widget</zorder>
-  <zorder>NewSessionScreen_widget</zorder>
+  <zorder>newUser_widget</zorder>
   <zorder>loginScreen_widget</zorder>
-  <zorder>homeManagerScreen_widget</zorder>
-  <zorder>dataEntry_widget</zorder>
   <zorder>faceID_widget</zorder>
+  <zorder>uniformConfig_widget</zorder>
+  <zorder>sessionReportScreen_widget</zorder>
+  <zorder>dataEntry_widget</zorder>
+  <zorder>NewSessionScreen_widget</zorder>
+  <zorder>homeManagerScreen_widget</zorder>
+  <zorder>cameraConfig_widget</zorder>
  </widget>
  <resources>
   <include location="res.qrc"/>

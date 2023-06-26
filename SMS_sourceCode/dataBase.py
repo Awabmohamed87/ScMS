@@ -57,8 +57,6 @@ def getUserByID(faceImageID):
         var = db.child("Managers").child(user.key()).get()
 
     return var.val()
-
-
 def mapRole(role):
     r = db.child("ROLES").child(role).get()
     return r.val()['ROLE']
@@ -78,4 +76,3 @@ def createUserAccount(email, password):
     except:
         print("Account already exists")
         return False
-

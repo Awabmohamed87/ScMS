@@ -21,7 +21,7 @@ class Cameras_Worker(QThread):
 
     def initiate_Session(self, mainSelf):
         self.mainSelf = mainSelf
-        self.Capture = cv2.VideoCapture(cameraPort)
+        self.Capture = cv2.VideoCapture(self.mainSelf.configuration.sessionCameraPort)
         self.all_Students = [[],[],[]]
         self.face_locations = []
         self.LiveView = True
@@ -259,9 +259,8 @@ class Cameras_Worker(QThread):
         #         print("Yawn", i[1], '%')
 
     def detect_Student_uniform(self, frame, facesLocations):
-        print('uniform')
-        uniformColorRange=[160,180]
-
+        print(self.mainSelf.configuration.clustersNumber)
+        print(self.mainSelf.configuration.uniformColorRange)
         top = facesLocations[0]
         right = facesLocations[1]
         bottom = facesLocations[2]
@@ -276,9 +275,9 @@ class Cameras_Worker(QThread):
         data = np.reshape(roi_color, (height * width, 3))
         data = np.float32(data)
 
-        clustersNumber = 1
+        # clustersNumber = 1
         criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
-        _, _, centers = cv2.kmeans(data, clustersNumber, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
+        _, _, centers = cv2.kmeans(data, self.mainSelf.configuration.clustersNumber, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
 
         bar = np.zeros((1, 1, 3), np.uint8)
         bar[:] = centers[0]
@@ -287,7 +286,7 @@ class Cameras_Worker(QThread):
         h, s, v = cv2.split(hsv)
         print(hsv[0][0][0])
 
-        if hsv[0][0][0]>= uniformColorRange[0] and hsv[0][0][0]<= uniformColorRange[1]:
+        if hsv[0][0][0]>= self.mainSelf.configuration.uniformColorRange[0] and hsv[0][0][0]<= self.mainSelf.configuration.uniformColorRange[1]:
             return True
         else:
             return False
