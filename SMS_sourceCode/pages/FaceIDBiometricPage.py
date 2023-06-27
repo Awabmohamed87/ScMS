@@ -84,7 +84,6 @@ class FaceIDBiometric():
             self.timer.stop()
 
     def faceID_recognize(self):
-
         Capture = cv2.VideoCapture(self.mainSelf.configuration.faceIDCameraPort)
         _, frame = Capture.read()
         _, names = self.fr.run_recognition(frame)
