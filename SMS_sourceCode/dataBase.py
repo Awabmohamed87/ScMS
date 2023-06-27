@@ -17,7 +17,7 @@ def getUser(email):
     user = db.child("USERS").order_by_child("Email").equal_to(email).get()
     for row in user.each():
         if int(row.val()['ROLE']) == 4:
-            print(row.key())
+            # print(row.key())
             var = db.child("Students").child(row.key()).get()
         elif int(row.val()['ROLE']) == 3:
             var = db.child("Teachers").child(row.key()).get()
@@ -29,6 +29,34 @@ def getUser(email):
 
     return var.val(), int(row.val()['ROLE'])
 
+def getUserName_ByEmail(email):
+    user = db.child("USERS").order_by_child("Email").equal_to(email).get()
+    for row in user.each():
+        if int(row.val()['ROLE']) == 4:
+            var = db.child("Students").child(row.key()).get()
+        elif int(row.val()['ROLE']) == 3:
+            var = db.child("Teachers").child(row.key()).get()
+        elif int(row.val()['ROLE']) == 5:
+            continue
+        else:
+            var = db.child("Managers").child(row.key()).get()
+        break
+
+    return var.val()['Name']
+
+def getUserByID(faceImageID):
+    user = db.child("USERS").child(faceImageID).get()
+
+    if int(user.val()['ROLE']) == 4:
+        var = db.child("Students").child(user.key()).get()
+    elif int(user.val()['ROLE']) == 3:
+        var = db.child("Teachers").child(user.key()).get()
+    elif int(user.val()['ROLE']) == 5:
+        pass
+    else:
+        var = db.child("Managers").child(user.key()).get()
+
+    return var.val()
 def mapRole(role):
     r = db.child("ROLES").child(role).get()
     return r.val()['ROLE']
@@ -52,4 +80,3 @@ def createUserAccount(email, password):
     except:
         print("Account already exists")
         return False
-

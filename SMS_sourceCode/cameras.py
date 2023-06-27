@@ -1,3 +1,4 @@
+from config import *
 import sys
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -14,12 +15,13 @@ import copy
 import tensorflow as tf
 from PyQt5.QtGui import QMovie
 from PyQt5.QtCore import QByteArray
+from dataBase import *
 class Cameras_Worker(QThread):
     ImageUpdate = pyqtSignal(QImage)
 
     def initiate_Session(self, mainSelf):
         self.mainSelf = mainSelf
-        self.Capture = cv2.VideoCapture(0)
+        self.Capture = cv2.VideoCapture(self.mainSelf.configuration.sessionCameraPort)
         self.all_Students = [[],[],[]]
         self.face_locations = []
         self.LiveView = True
@@ -114,8 +116,9 @@ class Cameras_Worker(QThread):
         for i in range(1):
             ret, frame = self.Capture.read()
             facesLocations ,currentStudents_Names = self.fr.run_recognition(frame)
-            for i, student_Name in enumerate(currentStudents_Names):
-                if student_Name != 'Unknown':
+            for i, student_ID in enumerate(currentStudents_Names):
+                if student_ID != 'Unknown':
+                    student_Name=getUserName_ByEmail(student_ID)
                     if student_Name not in self.all_Students[0]:
                         current_time = datetime.datetime.now().time().strftime("%H:%M:%S H/M/S")
                         student_Uniforms_status = self.detect_Student_uniform(frame, facesLocations[i])
@@ -256,9 +259,8 @@ class Cameras_Worker(QThread):
         #         print("Yawn", i[1], '%')
 
     def detect_Student_uniform(self, frame, facesLocations):
-        print('uniform')
-        uniformColorRange=[160,180]
-
+        print(self.mainSelf.configuration.clustersNumber)
+        print(self.mainSelf.configuration.uniformColorRange)
         top = facesLocations[0]
         right = facesLocations[1]
         bottom = facesLocations[2]
@@ -273,9 +275,9 @@ class Cameras_Worker(QThread):
         data = np.reshape(roi_color, (height * width, 3))
         data = np.float32(data)
 
-        clustersNumber = 1
+        # clustersNumber = 1
         criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
-        _, _, centers = cv2.kmeans(data, clustersNumber, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
+        _, _, centers = cv2.kmeans(data, self.mainSelf.configuration.clustersNumber, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
 
         bar = np.zeros((1, 1, 3), np.uint8)
         bar[:] = centers[0]
@@ -284,7 +286,7 @@ class Cameras_Worker(QThread):
         h, s, v = cv2.split(hsv)
         print(hsv[0][0][0])
 
-        if hsv[0][0][0]>= uniformColorRange[0] and hsv[0][0][0]<= uniformColorRange[1]:
+        if hsv[0][0][0]>= self.mainSelf.configuration.uniformColorRange[0] and hsv[0][0][0]<= self.mainSelf.configuration.uniformColorRange[1]:
             return True
         else:
             return False
