@@ -4,13 +4,16 @@ from pages.sessionsHistoryPage import *
 from pages.newUserPage import *
 from pages.uniformConfigurePage import *
 from pages.cameraConfigPage import *
-
+from pages.aboutUsPage import *
+import PIL.Image
+import os
 class homePage():
     currentUser = {'Name': '...'}
     role = 1
     def __init__(self, mainSelf, user, roleID):
         self.mainSelf = mainSelf
         self.currentUser = user
+        self.currentUserEmail=user['Email']
         self.role = roleID
         self.GUI_initialize_Objects()
         self.GUI_connect_buttons()
@@ -30,21 +33,43 @@ class homePage():
         self.addNewStudent_btn.setFocusPolicy(Qt.NoFocus)
         self.cameraConfigure_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "cameraConfigure_btn")
         self.cameraConfigure_btn.setFocusPolicy(Qt.NoFocus)
-
         self.uniformConfigure_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "uniformConfigure_btn")
         self.uniformConfigure_btn.setFocusPolicy(Qt.NoFocus)
-
         self.homeLogout_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "homeLogout_btn")
         self.homeLogout_btn.setFocusPolicy(Qt.NoFocus)
+        self.homeAboutUs_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "homeAboutUs_btn")
+        self.homeAboutUs_btn.setFocusPolicy(Qt.NoFocus)
+        # ------------ QLabels ------------
+        self.homeUserImage_Label = self.mainSelf.findChild(QtWidgets.QLabel, "homeUserImage_Label")
+        self.totalSystemUsers_label = self.mainSelf.findChild(QtWidgets.QLabel, "totalSystemUsers_label")
+        self.activeStudents_label = self.mainSelf.findChild(QtWidgets.QLabel, "activeStudents_label")
         self.currentUserNameLabel = self.mainSelf.findChild(QtWidgets.QLabel, "homeUserName_label")
         self.homeRolelabel = self.mainSelf.findChild(QtWidgets.QLabel, "homeJobRole_label")
-
-
-
 
     def _setupPage(self):
         self.currentUserNameLabel.setText(self.currentUser['Name'])
         self.homeRolelabel.setText(mapRole(self.role))
+        numUsers,numStudents= getSystem_Statistics()
+        self.totalSystemUsers_label.setText(str(numUsers))
+        self.activeStudents_label.setText(str(numStudents))
+
+        imagePath=self.currentUserEmail+".jpg"
+        Image=cv2.imread(f"students_Faces/{imagePath}")
+        if Image is not None:
+            height, width = Image.shape[:2]
+            # Set a desired maximum width or height
+            max_dimension = 100
+            # Calculate the proportional width and height
+            if width < height:
+                resized_width = max_dimension
+                resized_height = int(height * max_dimension / width)
+            else:
+                resized_height = max_dimension
+                resized_width = int(width * max_dimension / height)
+            # Resize the image while maintaining the aspect ratio
+            Image = cv2.resize(Image, (resized_width,resized_height))
+            ConvertToQtFormat = QImage(Image.data, Image.shape[1], Image.shape[0], QImage.Format_BGR888)
+            self.homeUserImage_Label.setPixmap(QPixmap.fromImage(ConvertToQtFormat))
 
     def GUI_connect_buttons(self):
         self.startNewSession_btn.clicked.connect(self.startNewSession_btn_clicked)
@@ -53,6 +78,7 @@ class homePage():
         self.uniformConfigure_btn.clicked.connect(self.uniformConfigure_btn_clicked)
         self.cameraConfigure_btn.clicked.connect(self.cameraConfigure_btn_clicked)
         self.homeLogout_btn.clicked.connect(self.homeLogout_btn_clicked)
+        self.homeAboutUs_btn.clicked.connect(self.homeAboutUs_btn_clicked)
 
     # ------------------- Buttons Clicked -------------------
     def navigate(self, currnetPage, destinationPage):
@@ -61,13 +87,13 @@ class homePage():
         destinationPageObj = self.mainSelf.findChild(QtWidgets.QWidget, destinationPage)
         destinationPageObj.show()
         destinationPageObj.raise_()
-        # get logged in user data
-        #getUser(email)
 
     def startNewSession_btn_clicked(self):
         self.mainSelf.newSessionPage = newSessionPage(self.mainSelf)
         self.navigate("homeManagerScreen_widget", "NewSessionScreen_widget")
-
+    def homeAboutUs_btn_clicked(self):
+        self.aboutUsPage = aboutUsPage(self.mainSelf,"Home")
+        self.navigate("homeManagerScreen_widget", "aboutUS_widget")
 
     def sessionsHistory_btn_clicked(self):
         self.mainSelf.sessionsHistoryPage = sessionsHistoryPage(self.mainSelf)

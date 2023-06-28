@@ -79,6 +79,7 @@ class newUserPage():
         self.isThreadActive = False
         self.liveViewCamera.join()
         self.cameraNewUserImage_Label.hide()
+        self.userImageRegister_Label.show()
         file_dialog = QFileDialog()
         file_path, _ = file_dialog.getOpenFileName(self.mainSelf, "Open File")
         if file_path:

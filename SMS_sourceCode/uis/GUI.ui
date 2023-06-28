@@ -1908,7 +1908,7 @@ color: rgb(64, 64, 64);</string>
        <string>Members Statistics</string>
       </property>
      </widget>
-     <widget class="QLabel" name="currentAvgAttention_label_2">
+     <widget class="QLabel" name="activeStudents_label">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -1964,7 +1964,7 @@ color: rgb(64, 64, 64);</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="currentAvgAttention_label_3">
+     <widget class="QLabel" name="totalSystemUsers_label">
       <property name="geometry">
        <rect>
         <x>210</x>
@@ -2409,24 +2409,6 @@ background-color: rgba(237, 239, 254,100);
       </size>
      </property>
     </widget>
-    <widget class="QLabel" name="homeUserImage_Label">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
-       <y>280</y>
-       <width>100</width>
-       <height>100</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,0);
-border-image: url(:/images/materials/Adnan.jpg);
-border-radius:35px;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
     <widget class="QLabel" name="homeUserName_label">
      <property name="geometry">
       <rect>
@@ -2462,6 +2444,67 @@ color: rgb(255, 255, 255);</string>
       <bool>true</bool>
      </property>
     </widget>
+    <widget class="QLabel" name="homeUserImage_Label_2">
+     <property name="geometry">
+      <rect>
+       <x>89</x>
+       <y>269</y>
+       <width>121</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,70);
+border-radius:35px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>99</x>
+       <y>279</y>
+       <width>101</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:35px;</string>
+     </property>
+     <widget class="QLabel" name="homeUserImage_Label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,0);
+border-image: url(:/images/materials/Adnan.jpg);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <zorder>homeSideBar_BG</zorder>
+    <zorder>personal_Information_btn</zorder>
+    <zorder>myPaymentHistory_btn</zorder>
+    <zorder>homeAboutUs_btn</zorder>
+    <zorder>homeUserImage_Label_2</zorder>
+    <zorder>homeUserName_label</zorder>
+    <zorder>widget</zorder>
    </widget>
    <zorder>mainScreenwhite_BG</zorder>
    <zorder>homeTopBar_widget_2</zorder>
@@ -4977,15 +5020,207 @@ border-radius:38px;</string>
    <zorder>topBar_widget_7</zorder>
    <zorder>mainDashboardContainer_widget_7</zorder>
   </widget>
+  <widget class="QWidget" name="aboutUS_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1575</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="mainScreen_BG_8">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/images/materials/reportBG.png);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="topBar_widget_8" native="true">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>1351</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+/*background-color: rgba(239, 174, 74,150);*/
+border-radius:20px;</string>
+    </property>
+    <widget class="QLabel" name="mainTopBarTitle_label_17">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>10</y>
+       <width>321</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins SemiBold</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>About Us</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="aboutUS_Back_btn">
+     <property name="geometry">
+      <rect>
+       <x>1050</x>
+       <y>10</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#aboutUS_Back_btn{
+background-color: rgb(229, 108, 120);
+	color: rgb(230, 230, 230);
+border-radius:20px;
+}
+
+QPushButton#aboutUS_Back_btn:hover{
+background-color: rgba(229, 108, 120,220);
+}
+
+QPushButton#aboutUS_Back_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(229, 108, 120,220);
+}</string>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="mainDashboardContainer_widget_8" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>1531</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+border-radius:20px;</string>
+    </property>
+    <widget class="QLabel" name="mainTopBarTitle_label_18">
+     <property name="geometry">
+      <rect>
+       <x>1420</x>
+       <y>660</y>
+       <width>191</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>18</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+     </property>
+     <property name="text">
+      <string>ScMS</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="waitingImage_Label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>1221</width>
+       <height>731</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="res.qrc">:/images/materials/Team members.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="mainScreenDark_BG_9">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,5);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>mainScreen_BG_8</zorder>
+   <zorder>mainScreenDark_BG_9</zorder>
+   <zorder>mainDashboardContainer_widget_8</zorder>
+   <zorder>topBar_widget_8</zorder>
+  </widget>
   <zorder>cameraConfig_widget</zorder>
   <zorder>dataEntry_widget</zorder>
-  <zorder>faceID_widget</zorder>
   <zorder>newUser_widget</zorder>
   <zorder>sessionReportScreen_widget</zorder>
   <zorder>uniformConfig_widget</zorder>
-  <zorder>welcomeScreen_widget</zorder>
   <zorder>loginScreen_widget</zorder>
+  <zorder>faceID_widget</zorder>
   <zorder>NewSessionScreen_widget</zorder>
+  <zorder>aboutUS_widget</zorder>
+  <zorder>welcomeScreen_widget</zorder>
   <zorder>homeManagerScreen_widget</zorder>
  </widget>
  <resources>

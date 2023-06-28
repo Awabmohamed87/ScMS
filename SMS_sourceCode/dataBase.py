@@ -65,6 +65,12 @@ def getCourseName(courseID):
     subject = db.child('Subjects').child(courseID).get()
     return subject.val()['SubjectName']
 
+def getSystem_Statistics():
+    users = db.child("USERS").get()
+    numUsers = len(users.val())
+    Students = db.child("Students").get()
+    numStudents = len(Students.val())
+    return numUsers,numStudents
 def login(email, password):
     try:
         auth.sign_in_with_email_and_password(str(email), str(password))
