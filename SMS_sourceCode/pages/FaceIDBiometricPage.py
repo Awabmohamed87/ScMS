@@ -77,7 +77,7 @@ class FaceIDBiometric():
 
     def update_Timer(self):
         self.counter += 1
-        if self.counter==1:
+        if self.counter==3:
             self.faceID_recognize()
             self.movie.stop()
             self.movie.jumpToFrame(0)
