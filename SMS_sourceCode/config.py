@@ -15,8 +15,17 @@ class config():
         self.numOfCameras = self.get_available_cameras()
         cameraConfig_results = db.child("Configuration").child("CameraConfig").get()
         if cameraConfig_results.val() is not None:
-            self.sessionCameraPort = cameraConfig_results.val()['cameraPort']['session']
-            self.faceIDCameraPort = cameraConfig_results.val()['cameraPort']['faceID']
+            sessionCameraPort=cameraConfig_results.val()['cameraPort']['session']
+            faceIDCameraPort=cameraConfig_results.val()['cameraPort']['faceID']
+
+            if sessionCameraPort<len(self.numOfCameras):
+                self.sessionCameraPort = sessionCameraPort
+            else:
+                self.sessionCameraPort =0
+            if faceIDCameraPort<len(self.numOfCameras):
+                self.faceIDCameraPort = faceIDCameraPort
+            else:
+                self.faceIDCameraPort =0
         else:
             self.sessionCameraPort=cameraPort['session']
             self.faceIDCameraPort=cameraPort['faceID']
