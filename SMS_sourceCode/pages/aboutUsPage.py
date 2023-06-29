@@ -1,5 +1,4 @@
 from general_lib import *
-from PyQt5.QtCore import *
 
 class aboutUsPage():
     def __init__(self, mainSelf, previousPage):

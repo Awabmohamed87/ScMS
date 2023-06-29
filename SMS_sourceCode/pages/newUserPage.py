@@ -1,7 +1,6 @@
 from general_lib import *
 from config import *
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QFileDialog
+from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QImage,QPixmap
 import cv2
 import threading
@@ -47,7 +46,6 @@ class newUserPage():
         destinationPageObj = self.mainSelf.findChild(QtWidgets.QWidget, destinationPage)
         destinationPageObj.show()
         destinationPageObj.raise_()
-
     def newUser_Back_btn_clicked(self):
         self.isThreadActive = False
         self.liveViewCamera.join()

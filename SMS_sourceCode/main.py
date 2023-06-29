@@ -24,10 +24,8 @@ class Window(QtWidgets.QWidget):
         self.welcomePage = welcomePage(self)
         self.sessionChartsPage = sessionChartsPage(self)
 
-    # action #1
     def mousePressEvent(self, event):
         self.oldPosition = event.globalPos()
-    # action #2
     def mouseMoveEvent(self, event):
         delta = QtCore.QPoint(event.globalPos() - self.oldPosition)
         self.move(self.x() + delta.x(), self.y() + delta.y())

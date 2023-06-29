@@ -2487,7 +2487,6 @@ border-radius:35px;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgba(255, 255, 255,0);
-border-image: url(:/images/materials/Adnan.jpg);
 </string>
       </property>
       <property name="text">
@@ -5211,17 +5210,17 @@ border-radius:38px;</string>
    <zorder>mainDashboardContainer_widget_8</zorder>
    <zorder>topBar_widget_8</zorder>
   </widget>
+  <zorder>aboutUS_widget</zorder>
   <zorder>cameraConfig_widget</zorder>
   <zorder>dataEntry_widget</zorder>
+  <zorder>faceID_widget</zorder>
   <zorder>newUser_widget</zorder>
   <zorder>sessionReportScreen_widget</zorder>
   <zorder>uniformConfig_widget</zorder>
   <zorder>loginScreen_widget</zorder>
-  <zorder>faceID_widget</zorder>
-  <zorder>aboutUS_widget</zorder>
+  <zorder>NewSessionScreen_widget</zorder>
   <zorder>homeManagerScreen_widget</zorder>
   <zorder>welcomeScreen_widget</zorder>
-  <zorder>NewSessionScreen_widget</zorder>
  </widget>
  <resources>
   <include location="res.qrc"/>

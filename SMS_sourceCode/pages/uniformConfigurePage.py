@@ -1,8 +1,5 @@
 from general_lib import *
 from config import *
-from PyQt5.QtCore import *
-import cv2
-
 
 class uniformConfigurePage():
     def __init__(self, mainSelf):

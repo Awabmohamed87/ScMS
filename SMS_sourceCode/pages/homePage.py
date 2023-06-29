@@ -5,8 +5,7 @@ from pages.newUserPage import *
 from pages.uniformConfigurePage import *
 from pages.cameraConfigPage import *
 from pages.aboutUsPage import *
-import PIL.Image
-import os
+
 class homePage():
     currentUser = {'Name': '...'}
     role = 1

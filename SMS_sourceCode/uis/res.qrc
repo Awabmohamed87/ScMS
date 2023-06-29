@@ -7,20 +7,15 @@
     <file>materials/welcomeScreen3.png</file>
     <file>materials/dataEntryBG.png</file>
     <file>materials/homeSideMenu.png</file>
-    <file>materials/Adnan.jpg</file>
     <file>materials/smsLogo.png</file>
     <file>materials/mainScreenBG.png</file>
-    <file>materials/welcomeScreen2.png</file>
     <file>materials/loginScreen.png</file>
-    <file>materials/welcomeScreen.png</file>
   </qresource>
   <qresource prefix="icons">
     <file>materials/icons/digital-camera.png</file>
     <file>materials/icons/shirt.png</file>
-    <file>materials/icons/tea-timeAnim.gif</file>
     <file>materials/icons/tea-time.png</file>
     <file>materials/icons/attention.png</file>
-    <file>materials/icons/record.png</file>
     <file>materials/icons/plain.png</file>
     <file>materials/icons/apprentice.png</file>
     <file>materials/icons/payment-method.png</file>

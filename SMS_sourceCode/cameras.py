@@ -8,13 +8,10 @@ from faceRecognation import *
 import threading
 import time
 import datetime
-import concurrent.futures
 import mediapipe as mp
 import numpy as np
 import copy
 import tensorflow as tf
-from PyQt5.QtGui import QMovie
-from PyQt5.QtCore import QByteArray
 from dataBase import *
 class Cameras_Worker(QThread):
     ImageUpdate = pyqtSignal(QImage)
@@ -47,7 +44,6 @@ class Cameras_Worker(QThread):
         # Set the size of the QMovie to be the same as the QLabel
         self.movie.setScaledSize(self.breakAnimation_Label.size())
         self.breakAnimation_Label.setMovie(self.movie)
-        # self.movie.start()
         self.breakAnimation_Label.hide()
         #-------- Start Session Timer --------
         self.counter = 0
@@ -64,26 +60,21 @@ class Cameras_Worker(QThread):
 
     def SessionCamera_UpdateSlot(self, Image):
         self.cameraAttendance_Label.setPixmap(QPixmap.fromImage(Image))
-
     def liveViewCamera_Worker(self):
-
         # scaleFactor = 0.8
         processFrame=0
         while self.ThreadActive:
             while self.LiveView and self.ThreadActive:
-                start = time.time()
+                # start = time.time()
                 ret, Image = self.Capture.read()
-                # Image = cv2.resize(Image, (680,383), interpolation = cv2.INTER_AREA)
                 Image = cv2.flip(Image, 1)
                 if processFrame==0:
                     rgb_small_frame = cv2.cvtColor(Image, cv2.COLOR_BGR2RGB)
                     face_locations = face_recognition.face_locations(rgb_small_frame, model="hog")
-
                     if self.measureAttention== False:
                         self.attentionImg = copy.copy(Image)
                         self.face_locations=copy.copy(face_locations)
                         self.measureAttention = True
-
                 for (top, right, bottom, left) in face_locations:
                     # ---------------- Display Detection ------------------
                     cv2.rectangle(Image, (left, top), (right, bottom), (0, 255, 0), 2)
@@ -111,7 +102,6 @@ class Cameras_Worker(QThread):
     def enableAttendanceCamera_Worker(self):
         self.LiveView =False
         self.takingAttendance=True
-
     def recordAttendance(self):
         for i in range(1):
             ret, frame = self.Capture.read()
@@ -133,7 +123,6 @@ class Cameras_Worker(QThread):
     def track_students_Attention(self):
         mp_face_mesh = mp.solutions.face_mesh
         face_mesh = mp_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidence=0.5)
-
         self.avg_attentionLevel = []
         while self.ThreadActive:
             while self.measureAttention and self.ThreadActive :
@@ -231,14 +220,12 @@ class Cameras_Worker(QThread):
                             if unfocusedStudent_Counter==5:
                                 unfocusedStudent_Counter=1
                             # cv2.imwrite("extracted_faces/" + str(img_number) + text + ".jpg", image)
-                        # print(text)
+
                 if len(temp_avg_attentionLevel)!=0:
                     temp_avg_attentionLevel =int((sum(temp_avg_attentionLevel) / len(temp_avg_attentionLevel))*100)
                     self.currentAvgAttention_label.setText(str(temp_avg_attentionLevel)+'%')
-                    # print(temp_avg_attentionLevel)
                 time.sleep(1)
                 self.measureAttention=False
-
     def track_students_Yawn(self,face):
         pass
         # # cv2.imwrite("tessst/xad.jpg", face)
@@ -259,15 +246,12 @@ class Cameras_Worker(QThread):
         #         print("Yawn", i[1], '%')
 
     def detect_Student_uniform(self, frame, facesLocations):
-        print(self.mainSelf.configuration.clustersNumber)
-        print(self.mainSelf.configuration.uniformColorRange)
         top = facesLocations[0]
         right = facesLocations[1]
         bottom = facesLocations[2]
         left = facesLocations[3]
         margen = int((right - left) / 2)
         roi_color = frame[bottom + margen:(2*bottom+2*margen-top),max((left - margen), 0):right + margen]
-
         height, width, _ = np.shape(roi_color)
         if height ==0 or width == 0:
             return False
@@ -275,7 +259,6 @@ class Cameras_Worker(QThread):
         data = np.reshape(roi_color, (height * width, 3))
         data = np.float32(data)
 
-        # clustersNumber = 1
         criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
         _, _, centers = cv2.kmeans(data, self.mainSelf.configuration.clustersNumber, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
 

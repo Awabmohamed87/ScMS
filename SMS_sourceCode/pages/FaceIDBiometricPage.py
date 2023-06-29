@@ -1,10 +1,10 @@
 from general_lib import *
 from config import *
 from pages.homePage import homePage
-from PyQt5.QtCore import *
+from PyQt5.QtCore import QTimer
 from faceRecognation import *
-import face_recognition
 import cv2
+
 class FaceIDBiometric():
     def __init__(self, mainSelf):
         self.mainSelf = mainSelf

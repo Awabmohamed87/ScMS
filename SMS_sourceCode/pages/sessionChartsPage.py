@@ -1,7 +1,6 @@
 from general_lib import *
 from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
+from PyQt5.QtWidgets import QVBoxLayout, QTableWidgetItem
 from PyQt5.QtChart import QChart, QChartView, QPieSeries
 class sessionChartsPage():
     def __init__(self, mainSelf):
@@ -53,8 +52,6 @@ class sessionChartsPage():
         Uniform_Item.setLabelVisible(True)
         Uniform_Item.setLabelFont(labelFont)
 
-        # Uniform_Item.setBrush(QColor(33, 140, 116,160))
-
         NotInUniform_item = self.series.append("Not in Uniform: " + str(0), 0)
         NotInUniform_item.setExploded(True)
         NotInUniform_item.setLabelVisible(True)
@@ -65,7 +62,6 @@ class sessionChartsPage():
         self.chart.addSeries(self.series)
         self.chart.setAnimationOptions(QChart.SeriesAnimations)
         self.chart.setTitleFont(titleFont)
-        # self.chart.setTitle("Students Unifrom")
 
         # Create Chart Viewer
         self.chartView = QChartView(self.chart)
