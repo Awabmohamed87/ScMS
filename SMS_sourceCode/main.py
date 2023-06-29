@@ -1,15 +1,10 @@
-# from PyQt5 import QtCore, QtGui, QtWidgets
-import os
 from PyQt5 import uic
-from PyQt5 import pyrcc
+# from PyQt5 import pyrcc
 from uis import res
 from pages.welcomePage import *
-from pages.loginPage import *
-from pages.homePage import *
-from pages.newSessionPage import *
+import sys
 from pages.sessionChartsPage import *
 from config import *
-os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1"
 
 class Window(QtWidgets.QWidget):
     def __init__(self):
@@ -24,12 +19,10 @@ class Window(QtWidgets.QWidget):
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.configuration= config(self)
 
-
     def GUI_initialize_Pages(self):
         # ------------ Pages ------------
         self.welcomePage = welcomePage(self)
         self.sessionChartsPage = sessionChartsPage(self)
-
 
     # action #1
     def mousePressEvent(self, event):

@@ -1,4 +1,5 @@
 from general_lib import *
+from dataBase import *
 from pages.homePage import homePage
 from pages.FaceIDBiometricPage import FaceIDBiometric
 

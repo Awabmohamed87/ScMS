@@ -5218,10 +5218,10 @@ border-radius:38px;</string>
   <zorder>uniformConfig_widget</zorder>
   <zorder>loginScreen_widget</zorder>
   <zorder>faceID_widget</zorder>
-  <zorder>NewSessionScreen_widget</zorder>
   <zorder>aboutUS_widget</zorder>
-  <zorder>welcomeScreen_widget</zorder>
   <zorder>homeManagerScreen_widget</zorder>
+  <zorder>welcomeScreen_widget</zorder>
+  <zorder>NewSessionScreen_widget</zorder>
  </widget>
  <resources>
   <include location="res.qrc"/>
