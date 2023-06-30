@@ -15,7 +15,6 @@ import tensorflow as tf
 from dataBase import *
 class Cameras_Worker(QThread):
     ImageUpdate = pyqtSignal(QImage)
-
     def initiate_Session(self, mainSelf):
         self.mainSelf = mainSelf
         self.Capture = cv2.VideoCapture(self.mainSelf.configuration.sessionCameraPort)
@@ -108,7 +107,7 @@ class Cameras_Worker(QThread):
             facesLocations ,currentStudents_Names = self.fr.run_recognition(frame)
             for i, student_ID in enumerate(currentStudents_Names):
                 if student_ID != 'Unknown':
-                    student_Name=getUserName_ByEmail(student_ID)
+                    student_Name=self.mainSelf.dataBase.getUserName_ByEmail(student_ID)
                     if student_Name not in self.all_Students[0]:
                         current_time = datetime.datetime.now().time().strftime("%H:%M:%S H/M/S")
                         student_Uniforms_status = self.detect_Student_uniform(frame, facesLocations[i])

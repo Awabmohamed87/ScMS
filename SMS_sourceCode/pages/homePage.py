@@ -96,7 +96,7 @@ class homePage():
 
     def sessionsHistory_btn_clicked(self):
         self.mainSelf.sessionsHistoryPage = sessionsHistoryPage(self.mainSelf)
-        # self.navigate("homeManagerScreen_widget", "dataEntry_widget")
+        self.navigate("homeManagerScreen_widget", "sessionHistory_widget")
     def addNewStudent_btn_clicked(self):
         self.newUserPage = newUserPage(self.mainSelf)
         self.navigate("homeManagerScreen_widget", "newUser_widget")

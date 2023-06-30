@@ -2,6 +2,7 @@ from general_lib import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import QVBoxLayout, QTableWidgetItem
 from PyQt5.QtChart import QChart, QChartView, QPieSeries
+from datetime import datetime
 class sessionChartsPage():
     def __init__(self, mainSelf):
         self.mainSelf = mainSelf
@@ -79,6 +80,9 @@ class sessionChartsPage():
         if(len(self.sessionInfo.all_Students[2])):
             self.avg_attentionLevel = int((sum(self.sessionInfo.avg_attentionLevel) / len(self.sessionInfo.avg_attentionLevel))*100)
             self.averageAttentionLevel_label.setText(str(self.avg_attentionLevel)+'%')
+        else:
+            self.avg_attentionLevel = 0
+            self.averageAttentionLevel_label.setText(str(self.avg_attentionLevel) + '%')
 
         # Display & Count the number of students
         self.numOfStudents_label.setText(str(len(sessionInfo.all_Students[0])))
@@ -134,9 +138,19 @@ class sessionChartsPage():
 
     def save_backHome_btn_clicked(self):
         self.navigate("NewSessionScreen_widget", "homeManagerScreen_widget")
-
         self.sessionInfo.studentsAttendance_tableWidget.setRowCount(0)
         self.sessionInfo.sessionTime_label.setText('Session time elapsed: 0:00:00')
+        self.storeSessionInfo_in_dataBase()
 
     def reportSave_exit_btn_clicked(self):
+        self.storeSessionInfo_in_dataBase()
         self.mainSelf.close()
+    def storeSessionInfo_in_dataBase(self):
+        sessionInfo={
+            'sessionAttendanceInfo': self.sessionInfo.all_Students,
+            'subject':'ML',
+            'date':str(datetime.now()),
+            'sessionDuration': str(self.sessionInfo.sessionTime_label.text()),
+            'avgAttentionLevel':self.avg_attentionLevel
+        }
+        self.mainSelf.dataBase.db.child("Sessions").push(sessionInfo)

@@ -18,9 +18,7 @@ class dataBase():
         self.db = self.firebase.database()
 
     def getUser(self,email):
-        print("before get")
         user = self.db.child("USERS").order_by_child("Email").equal_to(email).get()
-        print("after get")
 
         for row in user.each():
             if int(row.val()['ROLE']) == 4:
