@@ -5210,17 +5210,259 @@ border-radius:38px;</string>
    <zorder>mainDashboardContainer_widget_8</zorder>
    <zorder>topBar_widget_8</zorder>
   </widget>
+  <widget class="QWidget" name="connectionError_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1575</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="mainScreen_BG_9">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/images/materials/reportBG.png);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="topBar_widget_9" native="true">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>1351</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+/*background-color: rgba(239, 174, 74,150);*/
+border-radius:20px;</string>
+    </property>
+    <widget class="QLabel" name="mainTopBarTitle_label_19">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>10</y>
+       <width>351</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins SemiBold</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>Connection Status</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="connError_Exit_btn">
+     <property name="geometry">
+      <rect>
+       <x>1050</x>
+       <y>10</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#connError_Exit_btn{
+background-color: rgb(229, 108, 120);
+	color: rgb(230, 230, 230);
+border-radius:20px;
+}
+
+QPushButton#connError_Exit_btn:hover{
+background-color: rgba(229, 108, 120,220);
+}
+
+QPushButton#connError_Exit_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(229, 108, 120,220);
+}</string>
+     </property>
+     <property name="text">
+      <string>Exit</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="mainDashboardContainer_widget_9" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>1531</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+border-radius:20px;</string>
+    </property>
+    <widget class="QPushButton" name="connection_tryAgain_btn">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>620</y>
+       <width>651</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#connection_tryAgain_btn{
+background-color: rgb(229, 108, 120);
+	color: rgb(230, 230, 230);
+border-radius:20px;
+}
+
+QPushButton#connection_tryAgain_btn:hover{
+background-color: rgba(229, 108, 120,220);
+}
+
+QPushButton#connection_tryAgain_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(229, 108, 120,220);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Try to Connect again</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mainTopBarTitle_label_20">
+     <property name="geometry">
+      <rect>
+       <x>1420</x>
+       <y>660</y>
+       <width>191</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>18</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+     </property>
+     <property name="text">
+      <string>ScMS</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mainTopBarTitle_label_21">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>140</y>
+       <width>1531</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins SemiBold</family>
+       <pointsize>36</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>Internet Connection is NOT Available</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="mainScreenDark_BG_10">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,5);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>mainScreenDark_BG_10</zorder>
+   <zorder>mainScreen_BG_9</zorder>
+   <zorder>topBar_widget_9</zorder>
+   <zorder>mainDashboardContainer_widget_9</zorder>
+  </widget>
+  <zorder>NewSessionScreen_widget</zorder>
   <zorder>aboutUS_widget</zorder>
-  <zorder>cameraConfig_widget</zorder>
   <zorder>dataEntry_widget</zorder>
   <zorder>faceID_widget</zorder>
-  <zorder>newUser_widget</zorder>
-  <zorder>sessionReportScreen_widget</zorder>
-  <zorder>uniformConfig_widget</zorder>
-  <zorder>loginScreen_widget</zorder>
-  <zorder>NewSessionScreen_widget</zorder>
   <zorder>homeManagerScreen_widget</zorder>
+  <zorder>loginScreen_widget</zorder>
+  <zorder>newUser_widget</zorder>
   <zorder>welcomeScreen_widget</zorder>
+  <zorder>uniformConfig_widget</zorder>
+  <zorder>sessionReportScreen_widget</zorder>
+  <zorder>cameraConfig_widget</zorder>
+  <zorder>connectionError_widget</zorder>
  </widget>
  <resources>
   <include location="res.qrc"/>

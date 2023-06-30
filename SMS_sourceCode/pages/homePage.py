@@ -47,8 +47,8 @@ class homePage():
 
     def _setupPage(self):
         self.currentUserNameLabel.setText(self.currentUser['Name'])
-        self.homeRolelabel.setText(mapRole(self.role))
-        numUsers,numStudents= getSystem_Statistics()
+        self.homeRolelabel.setText(self.mainSelf.dataBase.mapRole(self.role))
+        numUsers,numStudents= self.mainSelf.dataBase.getSystem_Statistics()
         self.totalSystemUsers_label.setText(str(numUsers))
         self.activeStudents_label.setText(str(numStudents))
 

@@ -76,9 +76,9 @@ class loginPage():
     def login_handling(self):
         loginUserName_tbox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginUserName_tbox")
         loginPassword_tbox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginPassword_tbox")
-        if login(loginUserName_tbox.text(), loginPassword_tbox.text()):
+        if self.mainSelf.dataBase.login(loginUserName_tbox.text(), loginPassword_tbox.text()):
             # Create an object of Home Page
-            user, id = getUser(loginUserName_tbox.text())
+            user, id = self.mainSelf.dataBase.getUser(loginUserName_tbox.text())
             self.homePage = homePage(self.mainSelf, user, id)
 
             self.navigate("loginScreen_widget", "homeManagerScreen_widget")

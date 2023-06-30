@@ -4,7 +4,7 @@ class config():
     def __init__(self, mainSelf, uniformColorRange=[160,180], clustersNumber = 1, cameraPort ={'session':0, 'faceID':0}):
         self.mainSelf = mainSelf
         # --------------- Uniform Configuration ---------------
-        uniformConfig_results=db.child("Configuration").child("UniformConfig").get()
+        uniformConfig_results=self.mainSelf.dataBase.db.child("Configuration").child("UniformConfig").get()
         if uniformConfig_results.val() is not None:
             self.clustersNumber =uniformConfig_results.val()['clustersNumber']
             self.uniformColorRange=uniformConfig_results.val()['ColorRange']
@@ -13,7 +13,7 @@ class config():
             self.uniformColorRange = uniformColorRange
         # --------------- Camera Configuration ---------------
         self.numOfCameras = self.get_available_cameras()
-        cameraConfig_results = db.child("Configuration").child("CameraConfig").get()
+        cameraConfig_results = self.mainSelf.dataBase.db.child("Configuration").child("CameraConfig").get()
         if cameraConfig_results.val() is not None:
             sessionCameraPort=cameraConfig_results.val()['cameraPort']['session']
             faceIDCameraPort=cameraConfig_results.val()['cameraPort']['faceID']
@@ -47,15 +47,15 @@ class config():
         if isSession:
             cameraPort = (self.sessionCameraPort+1) % len(self.numOfCameras)
             self.sessionCameraPort = cameraPort
-            db.child("Configuration").child("CameraConfig").set({'cameraPort': {'session':cameraPort, 'faceID':self.faceIDCameraPort}})
+            self.mainSelf.dataBase.db.child("Configuration").child("CameraConfig").set({'cameraPort': {'session':cameraPort, 'faceID':self.faceIDCameraPort}})
         else:
             cameraPort = (self.faceIDCameraPort + 1) % len(self.numOfCameras)
             self.faceIDCameraPort = cameraPort
-            db.child("Configuration").child("CameraConfig").set({'cameraPort': {'session': self.sessionCameraPort, 'faceID': cameraPort}})
+            self.mainSelf.dataBase.db.child("Configuration").child("CameraConfig").set({'cameraPort': {'session': self.sessionCameraPort, 'faceID': cameraPort}})
     def changeCamerasPorts(self,sessionPort,faceIDPort):
         self.sessionCameraPort = sessionPort
         self.faceIDCameraPort = faceIDPort
-        db.child("Configuration").child("CameraConfig").set({'cameraPort': {'session': sessionPort, 'faceID': faceIDPort}})
+        self.mainSelf.dataBase.db.child("Configuration").child("CameraConfig").set({'cameraPort': {'session': sessionPort, 'faceID': faceIDPort}})
     def changeUniformColor(self,mainUniformColor_tbox, seccondUniformColor_tbox_tbox):
         if seccondUniformColor_tbox_tbox =='':
             clustersNumber=1
@@ -70,4 +70,4 @@ class config():
         'clustersNumber': clustersNumber,
         'ColorRange': uniformColorRange
         }
-        db.child("Configuration").child("UniformConfig").set(data)
+        self.mainSelf.dataBase.db.child("Configuration").child("UniformConfig").set(data)

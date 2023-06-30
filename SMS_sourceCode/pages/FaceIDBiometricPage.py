@@ -115,7 +115,7 @@ class FaceIDBiometric():
     # ------------------- Login Handler -------------------
     def login_handling(self, userFace):
         # Create an object of Home Page
-        user, id = getUser(userFace)
+        user, id = self.mainSelf.dataBase.getUser(userFace)
         self.homePage = homePage(self.mainSelf, user, id)
 
         self.navigate("loginScreen_widget", "homeManagerScreen_widget")
