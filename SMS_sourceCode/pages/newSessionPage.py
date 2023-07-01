@@ -28,6 +28,7 @@ class newSessionPage():
         self.endSession_btn.setFocusPolicy(Qt.NoFocus)
         # ------------ Tabel ------------
         self.studentsAttendance_tableWidget = self.mainSelf.findChild(QtWidgets.QTableWidget, "studentsAttendance_tableWidget")
+        self.studentsAttendance_tableWidget.setColumnWidth(0, 200)
 
     def GUI_connect_buttons(self):
         self.endSession_btn.clicked.connect(self.endSession_btn_clicked)

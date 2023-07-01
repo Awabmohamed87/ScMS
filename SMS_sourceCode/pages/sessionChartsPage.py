@@ -25,6 +25,7 @@ class sessionChartsPage():
 
         # ------------ Tabel ------------
         self.reportAttendance_tableWidget = self.mainSelf.findChild(QtWidgets.QTableWidget,"reportAttendance_tableWidget")
+        self.reportAttendance_tableWidget.setColumnWidth(0, 170)
 
         # ------------ Buttons ------------
         self.save_backHome_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "save_backHome_btn")
@@ -138,9 +139,9 @@ class sessionChartsPage():
 
     def save_backHome_btn_clicked(self):
         self.navigate("NewSessionScreen_widget", "homeManagerScreen_widget")
+        self.storeSessionInfo_in_dataBase()
         self.sessionInfo.studentsAttendance_tableWidget.setRowCount(0)
         self.sessionInfo.sessionTime_label.setText('Session time elapsed: 0:00:00')
-        self.storeSessionInfo_in_dataBase()
 
     def reportSave_exit_btn_clicked(self):
         self.storeSessionInfo_in_dataBase()

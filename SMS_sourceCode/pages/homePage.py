@@ -5,6 +5,7 @@ from pages.newUserPage import *
 from pages.uniformConfigurePage import *
 from pages.cameraConfigPage import *
 from pages.aboutUsPage import *
+from pages.personalInfoPage import *
 
 class homePage():
     currentUser = {'Name': '...'}
@@ -38,6 +39,8 @@ class homePage():
         self.homeLogout_btn.setFocusPolicy(Qt.NoFocus)
         self.homeAboutUs_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "homeAboutUs_btn")
         self.homeAboutUs_btn.setFocusPolicy(Qt.NoFocus)
+        self.personal_Information_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "personal_Information_btn")
+        self.personal_Information_btn.setFocusPolicy(Qt.NoFocus)
         # ------------ QLabels ------------
         self.homeUserImage_Label = self.mainSelf.findChild(QtWidgets.QLabel, "homeUserImage_Label")
         self.totalSystemUsers_label = self.mainSelf.findChild(QtWidgets.QLabel, "totalSystemUsers_label")
@@ -78,6 +81,7 @@ class homePage():
         self.cameraConfigure_btn.clicked.connect(self.cameraConfigure_btn_clicked)
         self.homeLogout_btn.clicked.connect(self.homeLogout_btn_clicked)
         self.homeAboutUs_btn.clicked.connect(self.homeAboutUs_btn_clicked)
+        self.personal_Information_btn.clicked.connect(self.personal_Information_btn_clicked)
 
     # ------------------- Buttons Clicked -------------------
     def navigate(self, currnetPage, destinationPage):
@@ -93,7 +97,9 @@ class homePage():
     def homeAboutUs_btn_clicked(self):
         self.aboutUsPage = aboutUsPage(self.mainSelf,"Home")
         self.navigate("homeManagerScreen_widget", "aboutUS_widget")
-
+    def personal_Information_btn_clicked(self):
+        self.personalInfoPage = personalInfoPage(self.mainSelf,self.currentUser)
+        self.navigate("homeManagerScreen_widget", "personalInfo_widget")
     def sessionsHistory_btn_clicked(self):
         self.mainSelf.sessionsHistoryPage = sessionsHistoryPage(self.mainSelf)
         self.navigate("homeManagerScreen_widget", "sessionHistory_widget")
