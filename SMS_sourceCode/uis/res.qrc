@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="images">
+    <file>materials/Contact Team members.png</file>
     <file>materials/Team members.png</file>
     <file>materials/HSV.png</file>
     <file>materials/reportBG.png</file>
