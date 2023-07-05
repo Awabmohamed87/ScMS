@@ -3746,6 +3746,11 @@ background-color: rgba(229, 108, 120,220);
       <height>751</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(200, 200, 200,80);
 border-radius:20px;</string>
@@ -3917,7 +3922,7 @@ border-radius:0px;
       <rect>
        <x>30</x>
        <y>120</y>
-       <width>821</width>
+       <width>391</width>
        <height>71</height>
       </rect>
      </property>
@@ -4226,6 +4231,254 @@ background-color: rgba(44, 62, 80,210);
        <width>25</width>
        <height>25</height>
       </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="loginUserName_tbox_6">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>120</y>
+       <width>361</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+border-radius:0px;
+border-bottom:2px solid rgb(64,64,64);
+color:rgpa(255,255,255,230);
+padding-bottom:7px;
+
+
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Seat No.</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="roleComboBox">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>70</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>127</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>127</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>255</red>
+           <green>255</green>
+           <blue>127</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>120</red>
+           <green>120</green>
+           <blue>120</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>120</red>
+           <green>120</green>
+           <blue>120</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);
+border-radius: 7px;</string>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mainTopBarTitle_label_31">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>50</y>
+       <width>131</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins SemiBold</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>Role</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -6672,212 +6925,20 @@ color: rgb(64, 64, 64);</string>
    <zorder>historySessionDetailsContainer_widget</zorder>
    <zorder>unifromPieChartBGwidget_6</zorder>
   </widget>
-  <widget class="QWidget" name="contactUS_widget" native="true">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1575</width>
-     <height>900</height>
-    </rect>
-   </property>
-   <widget class="QLabel" name="mainScreen_BG_11">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1575</width>
-      <height>900</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image: url(:/images/materials/reportBG.png);
-border-radius:38px;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QWidget" name="topBar_widget_11" native="true">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>20</y>
-      <width>1351</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(200, 200, 200,80);
-/*background-color: rgba(239, 174, 74,150);*/
-border-radius:20px;</string>
-    </property>
-    <widget class="QLabel" name="mainTopBarTitle_label_31">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>10</y>
-       <width>321</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Poppins SemiBold</family>
-       <pointsize>20</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,0);
-color: rgb(64,64,64);</string>
-     </property>
-     <property name="text">
-      <string>Contact with Us</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="contactUS_Back_btn">
-     <property name="geometry">
-      <rect>
-       <x>1050</x>
-       <y>10</y>
-       <width>291</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Poppins Medium</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton#contactUS_Back_btn{
-background-color: rgb(229, 108, 120);
-	color: rgb(230, 230, 230);
-border-radius:20px;
-}
-
-QPushButton#contactUS_Back_btn:hover{
-background-color: rgba(229, 108, 120,220);
-}
-
-QPushButton#contactUS_Back_btn:pressed{
-padding-left:5px;
-padding-top:5px;
-background-color: rgba(229, 108, 120,220);
-}</string>
-     </property>
-     <property name="text">
-      <string>Back</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="mainDashboardContainer_widget_11" native="true">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>120</y>
-      <width>1531</width>
-      <height>751</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(200, 200, 200,80);
-border-radius:20px;</string>
-    </property>
-    <widget class="QLabel" name="mainTopBarTitle_label_32">
-     <property name="geometry">
-      <rect>
-       <x>1420</x>
-       <y>660</y>
-       <width>191</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Poppins Medium</family>
-       <pointsize>18</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,0);
-color: rgb(64, 64, 64);</string>
-     </property>
-     <property name="text">
-      <string>ScMS</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="waitingImage_Label_4">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>1221</width>
-       <height>731</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255,0);
-</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="res.qrc">:/images/materials/Contact Team members.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>false</bool>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QLabel" name="mainScreenDark_BG_12">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1575</width>
-      <height>900</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0,5);
-border-radius:38px;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <zorder>mainScreenDark_BG_12</zorder>
-   <zorder>mainScreen_BG_11</zorder>
-   <zorder>topBar_widget_11</zorder>
-   <zorder>mainDashboardContainer_widget_11</zorder>
-  </widget>
   <zorder>uniformConfig_widget</zorder>
+  <zorder>welcomeScreen_widget</zorder>
   <zorder>sessionReportScreen_widget</zorder>
   <zorder>sessionHistory_widget</zorder>
+  <zorder>aboutUS_widget</zorder>
   <zorder>cameraConfig_widget</zorder>
   <zorder>connectionError_widget</zorder>
   <zorder>dataEntry_widget</zorder>
   <zorder>faceID_widget</zorder>
   <zorder>loginScreen_widget</zorder>
-  <zorder>NewSessionScreen_widget</zorder>
-  <zorder>newUser_widget</zorder>
-  <zorder>personalInfo_widget</zorder>
-  <zorder>aboutUS_widget</zorder>
   <zorder>homeManagerScreen_widget</zorder>
-  <zorder>welcomeScreen_widget</zorder>
-  <zorder>contactUS_widget</zorder>
+  <zorder>NewSessionScreen_widget</zorder>
+  <zorder>personalInfo_widget</zorder>
+  <zorder>newUser_widget</zorder>
  </widget>
  <resources>
   <include location="res.qrc"/>
