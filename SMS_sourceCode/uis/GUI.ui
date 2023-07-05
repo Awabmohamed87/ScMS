@@ -3746,6 +3746,11 @@ background-color: rgba(229, 108, 120,220);
       <height>751</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgba(200, 200, 200,80);
 border-radius:20px;</string>
@@ -3917,7 +3922,7 @@ border-radius:0px;
       <rect>
        <x>30</x>
        <y>120</y>
-       <width>821</width>
+       <width>391</width>
        <height>71</height>
       </rect>
      </property>
@@ -4226,6 +4231,254 @@ background-color: rgba(44, 62, 80,210);
        <width>25</width>
        <height>25</height>
       </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="loginUserName_tbox_6">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>120</y>
+       <width>361</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Open Sans</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+border-radius:0px;
+border-bottom:2px solid rgb(64,64,64);
+color:rgpa(255,255,255,230);
+padding-bottom:7px;
+
+
+
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Seat No.</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="roleComboBox">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>70</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>127</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>127</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>255</red>
+           <green>255</green>
+           <blue>127</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>120</red>
+           <green>120</green>
+           <blue>120</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>120</red>
+           <green>120</green>
+           <blue>120</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="0">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="PlaceholderText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="128">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255, 0);
+border-radius: 7px;</string>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mainTopBarTitle_label_31">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>50</y>
+       <width>131</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins SemiBold</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>Role</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -6684,8 +6937,8 @@ color: rgb(64, 64, 64);</string>
   <zorder>loginScreen_widget</zorder>
   <zorder>homeManagerScreen_widget</zorder>
   <zorder>NewSessionScreen_widget</zorder>
-  <zorder>newUser_widget</zorder>
   <zorder>personalInfo_widget</zorder>
+  <zorder>newUser_widget</zorder>
  </widget>
  <resources>
   <include location="res.qrc"/>

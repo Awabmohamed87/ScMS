@@ -13,7 +13,7 @@ class homePage():
     def __init__(self, mainSelf, user, roleID):
         self.mainSelf = mainSelf
         self.currentUser = user
-        self.currentUserEmail=user['Email']
+        self.currentUserEmail = user['Email']
         self.role = roleID
         self.GUI_initialize_Objects()
         self.GUI_connect_buttons()
@@ -55,8 +55,14 @@ class homePage():
         self.totalSystemUsers_label.setText(str(numUsers))
         self.activeStudents_label.setText(str(numStudents))
 
-        imagePath=self.currentUserEmail+".jpg"
-        Image=cv2.imread(f"students_Faces/{imagePath}")
+        imagePath = self.currentUserEmail+".jpg"
+        if os.path.exists(imagePath):
+            Image = cv2.imread(f"students_Faces/{imagePath}")
+
+        else:
+            Image = cv2.imread(f"students_Faces/person-icon.png")
+
+
         if Image is not None:
             height, width = Image.shape[:2]
             # Set a desired maximum width or height
@@ -104,8 +110,11 @@ class homePage():
         self.mainSelf.sessionsHistoryPage = sessionsHistoryPage(self.mainSelf)
         self.navigate("homeManagerScreen_widget", "sessionHistory_widget")
     def addNewStudent_btn_clicked(self):
-        self.newUserPage = newUserPage(self.mainSelf)
-        self.navigate("homeManagerScreen_widget", "newUser_widget")
+        print(self.currentUser)
+        if(self.role != 4 ):
+
+            self.newUserPage = newUserPage(self.mainSelf, self.currentUser)
+            self.navigate("homeManagerScreen_widget", "newUser_widget")
     def uniformConfigure_btn_clicked(self):
         self.uniformConfigurePage = uniformConfigurePage(self.mainSelf)
         self.navigate("homeManagerScreen_widget", "uniformConfig_widget")

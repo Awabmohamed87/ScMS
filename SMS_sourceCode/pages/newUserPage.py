@@ -6,7 +6,7 @@ import cv2
 import threading
 
 class newUserPage():
-    def __init__(self, mainSelf):
+    def __init__(self, mainSelf, liveUser):
         self.mainSelf = mainSelf
         self.GUI_initialize_Objects()
         self.GUI_connect_buttons()
@@ -32,6 +32,28 @@ class newUserPage():
         self.registerNewUser_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "registerNewUser_btn")
         self.registerNewUser_btn.setFocusPolicy(Qt.NoFocus)
 
+        self.nameTextBox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginUserName_tbox_2")
+        self.nameTextBox.textChanged.connect(self.onTextChanged)
+        self.emailTextBox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginUserName_tbox_3")
+        self.emailTextBox.textChanged.connect(self.onTextChanged)
+        self.passwordTextBox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginPassword_tbox_2")
+        self.passwordTextBox.textChanged.connect(self.onTextChanged)
+        self.addressTextBox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginPassword_tbox_3")
+        self.addressTextBox.textChanged.connect(self.onTextChanged)
+        self.phoneTextBox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginUserName_tbox_4")
+        self.phoneTextBox.textChanged.connect(self.onTextChanged)
+        self.dobTextBox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginPassword_tbox_4")
+        self.dobTextBox.textChanged.connect(self.onTextChanged)
+        self.genderTextBox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginUserName_tbox_5")
+        self.genderTextBox.textChanged.connect(self.onTextChanged)
+        self.idTextBox = self.mainSelf.findChild(QtWidgets.QLineEdit, "loginUserName_tbox_6")
+        self.idTextBox.textChanged.connect(self.onTextChanged)
+
+        self.roleComboBox = self.mainSelf.findChild(QtWidgets.QComboBox, "roleComboBox")
+        self.roleComboBox.addItems(['Manager', 'Vice Manager', 'Teacher', 'Student', 'Student Affair'])
+
+    def onTextChanged(self):
+        self.registerNewUser_btn.setText('Register')
 
     def GUI_connect_buttons(self):
         self.newUser_Back_btn.clicked.connect(self.newUser_Back_btn_clicked)
@@ -100,4 +122,31 @@ class newUserPage():
             self.userImageRegister_Label.setPixmap(QPixmap.fromImage(Pic))
 
     def registerNewUser_btn_clicked(self):
-        pass
+
+        print(self.roleComboBox.currentIndex() + 1)
+        if self.nameTextBox.text() == '':
+            self.registerNewUser_btn.setText("Name can't be empty")
+
+        elif self.emailTextBox.text() == '':
+            self.registerNewUser_btn.setText("Email can't be empty")
+
+        elif self.passwordTextBox.text() == '':
+            self.registerNewUser_btn.setText("Password can't be empty")
+
+        elif len(self.passwordTextBox.text()) < 6:
+            self.registerNewUser_btn.setText("Password is too short \n Should be more than 6 characters")
+
+        elif self.idTextBox.text() == '':
+            self.registerNewUser_btn.setText("Seat number can't be empty")
+
+        elif self.addressTextBox.text() == '' or self.genderTextBox.text() == '' or self.phoneTextBox.text() == '' or self.dobTextBox.text() == '':
+            self.registerNewUser_btn.setText("Please fill in the missing data")
+
+        else:
+            newUser = {'Name': self.nameTextBox.text(), 'Address': self.addressTextBox.text(),
+                       'Email': self.emailTextBox.text(),
+                       'Password': self.passwordTextBox.text(), 'PhoneNumber': self.phoneTextBox.text(),
+                       'Sex': self.genderTextBox.text()}
+            print(newUser)
+
+            self.mainSelf.dataBase.addUser(self.idTextBox.text(), self.roleComboBox.currentIndex() + 1,  newUser)
