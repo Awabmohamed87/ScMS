@@ -3,10 +3,11 @@ from PyQt5.QtCore import QDate
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QImage,QPixmap
 import cv2
+import os
 class personalInfoPage():
     def __init__(self, mainSelf, userInfo):
         self.mainSelf = mainSelf
-        self.userInfo=userInfo
+        self.userInfo = userInfo
         self.GUI_initialize_Objects()
         self.GUI_connect_buttons()
         self.fill_UserInfo()
@@ -46,8 +47,12 @@ class personalInfoPage():
         date = QDate(year, month, day)
         self.BOG_dateEdit.setDate(date)
         # --------- Fill User Image ----------
-        image=self.userInfo['Email']+".jpg"
-        Image = cv2.imread(f"students_Faces/{image}")
+        imagePath = self.userInfo['Email']+".jpg"
+        if os.path.exists('students_Faces/' + imagePath):
+            Image = cv2.imread(f"students_Faces/{imagePath}")
+        else:
+            Image = cv2.imread(f"blank/person-icon.png")
+
         self.userImage = Image
         height, width = Image.shape[:2]
         # Set a desired maximum width or height
@@ -76,13 +81,14 @@ class personalInfoPage():
     def personalInfo_save_btn_clicked(self):
         #-------- Update Image ---------
         imagePath = self.userInfo['Email'] + ".jpg"
-        cv2.imwrite(f"students_Faces/{imagePath}")
+        #cv2.imwrite(f"students_Faces/{imagePath}", img)
         # -------- Update User Data ---------
         selected_date = self.BOG_dateEdit.date()
-        day = selected_date.day()
-        month = selected_date.month()
-        year = selected_date.year()
-        date=day+"/"+month+"/"+year
+
+        day = str(selected_date.day())
+        month = str(selected_date.month())
+        year = str(selected_date.year())
+        date = day + "/" + month + "/" + year
 
         #------------- Fill the Dictionary with needed data then push --------------
         self.updateUserName_tbox.text()

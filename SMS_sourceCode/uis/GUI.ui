@@ -3770,6 +3770,7 @@ border-radius:20px;</string>
        <pointsize>12</pointsize>
        <weight>50</weight>
        <bold>false</bold>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -3817,6 +3818,7 @@ background-color: rgba(44, 62, 80,210);
        <pointsize>20</pointsize>
        <weight>50</weight>
        <bold>false</bold>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -3897,6 +3899,7 @@ border-radius:20px;</string>
       <font>
        <family>Open Sans</family>
        <pointsize>11</pointsize>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -3930,6 +3933,7 @@ border-radius:0px;
       <font>
        <family>Open Sans</family>
        <pointsize>11</pointsize>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -3961,6 +3965,7 @@ padding-bottom:7px;
       <font>
        <family>Open Sans</family>
        <pointsize>11</pointsize>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -3994,6 +3999,7 @@ border-radius:0px;
       <font>
        <family>Open Sans</family>
        <pointsize>11</pointsize>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -4025,6 +4031,7 @@ padding-bottom:7px;
       <font>
        <family>Open Sans</family>
        <pointsize>11</pointsize>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -4058,6 +4065,7 @@ border-radius:0px;
       <font>
        <family>Open Sans</family>
        <pointsize>11</pointsize>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -4089,6 +4097,7 @@ padding-bottom:7px;
       <font>
        <family>Open Sans</family>
        <pointsize>11</pointsize>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -4120,6 +4129,7 @@ padding-bottom:7px;
       <font>
        <family>Open Sans</family>
        <pointsize>11</pointsize>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="currentSection">
@@ -4154,6 +4164,7 @@ padding-bottom:7px;
        <pointsize>12</pointsize>
        <weight>50</weight>
        <bold>false</bold>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -4201,6 +4212,7 @@ background-color: rgba(44, 62, 80,210);
        <pointsize>12</pointsize>
        <weight>50</weight>
        <bold>false</bold>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -4246,6 +4258,7 @@ background-color: rgba(44, 62, 80,210);
       <font>
        <family>Open Sans</family>
        <pointsize>11</pointsize>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -4288,18 +4301,18 @@ padding-bottom:7px;
         <colorrole role="Text">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>127</blue>
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>255</red>
-           <green>255</green>
-           <blue>127</blue>
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
           </color>
          </brush>
         </colorrole>
@@ -4318,6 +4331,15 @@ padding-bottom:7px;
            <red>255</red>
            <green>255</green>
            <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Shadow">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>170</green>
+           <blue>0</blue>
           </color>
          </brush>
         </colorrole>
@@ -4377,6 +4399,15 @@ padding-bottom:7px;
           </color>
          </brush>
         </colorrole>
+        <colorrole role="Shadow">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>170</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
         <colorrole role="PlaceholderText">
          <brush brushstyle="SolidPattern">
           <color alpha="128">
@@ -4433,6 +4464,15 @@ padding-bottom:7px;
           </color>
          </brush>
         </colorrole>
+        <colorrole role="Shadow">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>170</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
         <colorrole role="PlaceholderText">
          <brush brushstyle="SolidPattern">
           <color alpha="128">
@@ -4445,9 +4485,20 @@ padding-bottom:7px;
        </disabled>
       </palette>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgba(255, 255, 255, 0);
-border-radius: 7px;</string>
+      <string notr="true">
+background-color: rgba(255, 255, 255, 0);
+border-radius: 7px;
+
+ </string>
      </property>
      <property name="editable">
       <bool>false</bool>
@@ -4468,6 +4519,7 @@ border-radius: 7px;</string>
        <pointsize>20</pointsize>
        <weight>75</weight>
        <bold>true</bold>
+       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
@@ -6925,6 +6977,197 @@ color: rgb(64, 64, 64);</string>
    <zorder>historySessionDetailsContainer_widget</zorder>
    <zorder>unifromPieChartBGwidget_6</zorder>
   </widget>
+  <widget class="QWidget" name="contactUS_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1575</width>
+     <height>900</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="mainScreen_BG_11">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/images/materials/reportBG.png);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="topBar_widget_11" native="true">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>1351</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+/*background-color: rgba(239, 174, 74,150);*/
+border-radius:20px;</string>
+    </property>
+    <widget class="QLabel" name="mainTopBarTitle_label_32">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>10</y>
+       <width>321</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins SemiBold</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64,64,64);</string>
+     </property>
+     <property name="text">
+      <string>Contact with Us</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="contactUS_Back_btn">
+     <property name="geometry">
+      <rect>
+       <x>1050</x>
+       <y>10</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#contactUS_Back_btn{
+background-color: rgb(229, 108, 120);
+	color: rgb(230, 230, 230);
+border-radius:20px;
+}
+
+QPushButton#contactUS_Back_btn:hover{
+background-color: rgba(229, 108, 120,220);
+}
+
+QPushButton#contactUS_Back_btn:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color: rgba(229, 108, 120,220);
+}</string>
+     </property>
+     <property name="text">
+      <string>Back</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="mainDashboardContainer_widget_11" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>1531</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(200, 200, 200,80);
+border-radius:20px;</string>
+    </property>
+    <widget class="QLabel" name="mainTopBarTitle_label_33">
+     <property name="geometry">
+      <rect>
+       <x>1420</x>
+       <y>660</y>
+       <width>191</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Poppins Medium</family>
+       <pointsize>18</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+color: rgb(64, 64, 64);</string>
+     </property>
+     <property name="text">
+      <string>ScMS</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="waitingImage_Label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>1221</width>
+       <height>731</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(255, 255, 255,0);
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="res.qrc">:/images/materials/Contact Team members.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="mainScreenDark_BG_12">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1575</width>
+      <height>900</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0,5);
+border-radius:38px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>mainScreenDark_BG_12</zorder>
+   <zorder>mainScreen_BG_11</zorder>
+   <zorder>topBar_widget_11</zorder>
+   <zorder>mainDashboardContainer_widget_11</zorder>
+  </widget>
   <zorder>uniformConfig_widget</zorder>
   <zorder>welcomeScreen_widget</zorder>
   <zorder>sessionReportScreen_widget</zorder>
@@ -6937,6 +7180,7 @@ color: rgb(64, 64, 64);</string>
   <zorder>loginScreen_widget</zorder>
   <zorder>homeManagerScreen_widget</zorder>
   <zorder>NewSessionScreen_widget</zorder>
+  <zorder>contactUS_widget</zorder>
   <zorder>personalInfo_widget</zorder>
   <zorder>newUser_widget</zorder>
  </widget>

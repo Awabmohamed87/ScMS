@@ -47,13 +47,17 @@ class dataBase():
         else:
             table = 'Students_Affair'
 
-
-        print(user)
-        print(id)
-        print(table)
         self.db.child(table).child(id).set(user)
         self.auth.create_user_with_email_and_password(user['Email'], user['Password'])
         self.db.child('USERS').child(id).set({'Email': user['Email'], 'ROLE': role})
+
+    def isID_exist(self, id):
+        res = self.db.child("USERS").child(id).get()
+        if res.val() != None:
+            return True
+        else:
+            return False
+
 
     def getUserName_ByEmail(self, email):
         user = self.db.child("USERS").order_by_child("Email").equal_to(email).get()

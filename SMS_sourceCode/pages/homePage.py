@@ -51,16 +51,16 @@ class homePage():
     def _setupPage(self):
         self.currentUserNameLabel.setText(self.currentUser['Name'])
         self.homeRolelabel.setText(self.mainSelf.dataBase.mapRole(self.role))
-        numUsers,numStudents= self.mainSelf.dataBase.getSystem_Statistics()
+        numUsers, numStudents = self.mainSelf.dataBase.getSystem_Statistics()
         self.totalSystemUsers_label.setText(str(numUsers))
         self.activeStudents_label.setText(str(numStudents))
 
         imagePath = self.currentUserEmail+".jpg"
-        if os.path.exists(imagePath):
-            Image = cv2.imread(f"students_Faces/{imagePath}")
 
+        if os.path.exists('students_Faces/' + imagePath):
+            Image = cv2.imread(f"students_Faces/{imagePath}")
         else:
-            Image = cv2.imread(f"students_Faces/person-icon.png")
+            Image = cv2.imread(f"blank/person-icon.png")
 
 
         if Image is not None:

@@ -1,9 +1,10 @@
 from general_lib import *
 from config import *
 from PyQt5.QtWidgets import QFileDialog
-from PyQt5.QtGui import QImage,QPixmap
+from PyQt5.QtGui import QImage, QPixmap
 import cv2
 import threading
+
 
 class newUserPage():
     def __init__(self, mainSelf, liveUser):
@@ -68,10 +69,12 @@ class newUserPage():
         destinationPageObj = self.mainSelf.findChild(QtWidgets.QWidget, destinationPage)
         destinationPageObj.show()
         destinationPageObj.raise_()
+
     def newUser_Back_btn_clicked(self):
         self.isThreadActive = False
         self.liveViewCamera.join()
         self.navigate("newUser_widget", "homeManagerScreen_widget")
+
     def takePic_newUser_btn_clicked(self):
         self.userImageRegister_Label.hide()
         self.cameraNewUserImage_Label.show()
@@ -85,8 +88,9 @@ class newUserPage():
         Pic = ConvertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)
         self.cameraNewUserImage_Label.setPixmap(QPixmap.fromImage(Pic))
         self.Capture.release()
+
     def liveView_worker(self):
-        self.isThreadActive=True
+        self.isThreadActive = True
         self.Capture = cv2.VideoCapture(self.mainSelf.configuration.faceIDCameraPort)
         while self.isThreadActive:
             _, Image = self.Capture.read()
@@ -95,6 +99,7 @@ class newUserPage():
             Pic = ConvertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)
             self.cameraNewUserImage_Label.setPixmap(QPixmap.fromImage(Pic))
         self.Capture.release()
+
     def open_file_dialog(self):
         self.isThreadActive = False
         self.liveViewCamera.join()
@@ -103,7 +108,7 @@ class newUserPage():
         file_dialog = QFileDialog()
         file_path, _ = file_dialog.getOpenFileName(self.mainSelf, "Open File")
         if file_path:
-            Image= cv2.imread(file_path)
+            Image = cv2.imread(file_path)
             self.userImage = Image
             height, width = Image.shape[:2]
             # Set a desired maximum width or height
@@ -122,9 +127,11 @@ class newUserPage():
             self.userImageRegister_Label.setPixmap(QPixmap.fromImage(Pic))
 
     def registerNewUser_btn_clicked(self):
+        if self.mainSelf.dataBase.isID_exist(self.idTextBox.text()):
+            self.registerNewUser_btn.setText("Seat number incorrect \n"
+                                             " Type another Seat number that isn't already taken")
 
-        print(self.roleComboBox.currentIndex() + 1)
-        if self.nameTextBox.text() == '':
+        elif self.nameTextBox.text() == '':
             self.registerNewUser_btn.setText("Name can't be empty")
 
         elif self.emailTextBox.text() == '':
@@ -147,6 +154,5 @@ class newUserPage():
                        'Email': self.emailTextBox.text(),
                        'Password': self.passwordTextBox.text(), 'PhoneNumber': self.phoneTextBox.text(),
                        'Sex': self.genderTextBox.text()}
-            print(newUser)
 
-            self.mainSelf.dataBase.addUser(self.idTextBox.text(), self.roleComboBox.currentIndex() + 1,  newUser)
+            self.mainSelf.dataBase.addUser(self.idTextBox.text(), self.roleComboBox.currentIndex() + 1, newUser)
