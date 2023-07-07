@@ -2,18 +2,24 @@ from general_lib import *
 from config import *
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QImage, QPixmap
+from PyQt5.QtCore import *
 import cv2
 import threading
 
 
-class newUserPage():
-    def __init__(self, mainSelf, liveUser):
+class newUserPage(QThread):
+    ImageUpdate = pyqtSignal(QImage)
+    def initiate(self, mainSelf):
         self.mainSelf = mainSelf
         self.GUI_initialize_Objects()
         self.GUI_connect_buttons()
-
+    def run(self):
         self.isThreadActive = True
-
+        self.liveViewCamera = threading.Thread(target=self.liveView_worker)
+        self.liveViewCamera.start()
+        self.ImageUpdate.connect(self.ImageUpdate_UpdateSlot)
+    def ImageUpdate_UpdateSlot(self, Image):
+        self.cameraNewUserImage_Label.setPixmap(QPixmap.fromImage(Image))
     def GUI_initialize_Objects(self):
         # ------------ Pages ------------
         self.newUser_widget = self.mainSelf.findChild(QtWidgets.QWidget, "newUser_widget")
@@ -21,8 +27,7 @@ class newUserPage():
         self.userImage = None
         self.userImageRegister_Label = self.mainSelf.findChild(QtWidgets.QLabel, "userImageRegister_Label")
         self.cameraNewUserImage_Label = self.mainSelf.findChild(QtWidgets.QLabel, "cameraNewUserImage_Label")
-        self.liveViewCamera = threading.Thread(target=self.liveView_worker)
-        self.liveViewCamera.start()
+
         # ------------ Buttons ------------
         self.newUser_Back_btn = self.mainSelf.findChild(QtWidgets.QPushButton, "newUser_Back_btn")
         self.newUser_Back_btn.setFocusPolicy(Qt.NoFocus)
@@ -97,7 +102,8 @@ class newUserPage():
             Image = cv2.flip(Image, 1)
             ConvertToQtFormat = QImage(Image.data, Image.shape[1], Image.shape[0], QImage.Format_BGR888)
             Pic = ConvertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)
-            self.cameraNewUserImage_Label.setPixmap(QPixmap.fromImage(Pic))
+            self.ImageUpdate.emit(Pic)
+            # self.cameraNewUserImage_Label.setPixmap(QPixmap.fromImage(Pic))
         self.Capture.release()
 
     def open_file_dialog(self):

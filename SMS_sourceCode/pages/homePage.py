@@ -112,7 +112,9 @@ class homePage():
     def addNewStudent_btn_clicked(self):
         print(self.currentUser)
         # if(self.role != 4 ):
-        self.newUserPage = newUserPage(self.mainSelf, self.currentUser)
+        self.newUserPage = newUserPage()
+        self.newUserPage.initiate(self.mainSelf)
+        self.newUserPage.start()
         self.navigate("homeManagerScreen_widget", "newUser_widget")
     def uniformConfigure_btn_clicked(self):
         self.uniformConfigurePage = uniformConfigurePage(self.mainSelf)
@@ -120,7 +122,7 @@ class homePage():
     def cameraConfigure_btn_clicked(self):
         self.cameraConfigPage = cameraConfigPage()
         self.cameraConfigPage.initiate(self.mainSelf)
-        self.cameraConfigPage.run()
+        self.cameraConfigPage.start()
         self.navigate("homeManagerScreen_widget", "cameraConfig_widget")
     def homeLogout_btn_clicked(self):
         self.navigate("homeManagerScreen_widget", "welcomeScreen_widget")
