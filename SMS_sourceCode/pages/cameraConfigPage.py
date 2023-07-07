@@ -1,19 +1,36 @@
 from general_lib import *
 from config import *
-from PyQt5.QtGui import QImage,QPixmap
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
 import cv2
 import threading
 
-class cameraConfigPage():
-    def __init__(self, mainSelf):
+class cameraConfigPage(QThread):
+    ImageUpdate_FaceID = pyqtSignal(QImage)
+    ImageUpdate_Session = pyqtSignal(QImage)
+    def initiate(self, mainSelf):
+        print("in init")
         self.mainSelf = mainSelf
         self.GUI_initialize_Objects()
         self.GUI_connect_buttons()
-        self.currentSessionPort=self.mainSelf.configuration.sessionCameraPort
-        self.currentFaceIDPort=self.mainSelf.configuration.faceIDCameraPort
+        # self.liveViewCamera = threading.Thread(target=self.liveView_worker)
+        # self.liveViewCamera.start()
+
+    def run(self):
+        print("here")
         self.isThreadActive = True
+        self.currentSessionPort = self.mainSelf.configuration.sessionCameraPort
+        self.currentFaceIDPort = self.mainSelf.configuration.faceIDCameraPort
         self.liveViewCamera = threading.Thread(target=self.liveView_worker)
         self.liveViewCamera.start()
+        print("after h")
+        self.ImageUpdate_FaceID.connect(self.ImageUpdate_FaceID_UpdateSlot)
+        self.ImageUpdate_Session.connect(self.ImageUpdate_Session_UpdateSlot)
+        print("fin")
+    def ImageUpdate_FaceID_UpdateSlot(self, Image):
+        self.loginCameraConfig_Label.setPixmap(QPixmap.fromImage(Image))
+    def ImageUpdate_Session_UpdateSlot(self, Image):
+        self.sessionCameraConfig_Label.setPixmap(QPixmap.fromImage(Image))
     def GUI_initialize_Objects(self):
         # ------------ Pages ------------
         self.cameraConfig_widget = self.mainSelf.findChild(QtWidgets.QWidget, "cameraConfig_widget")
@@ -71,8 +88,11 @@ class cameraConfigPage():
                 _, Image = self.Capture.read()
                 ConvertToQtFormat = QImage(Image.data, Image.shape[1], Image.shape[0], QImage.Format_BGR888)
                 Pic = ConvertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)
-                self.sessionCameraConfig_Label.setPixmap(QPixmap.fromImage(Pic))
-                self.loginCameraConfig_Label.setPixmap(QPixmap.fromImage(Pic))
+                self.ImageUpdate_FaceID.emit(Pic)
+                self.ImageUpdate_Session.emit(Pic)
+
+                # self.sessionCameraConfig_Label.setPixmap(QPixmap.fromImage(Pic))
+                # self.loginCameraConfig_Label.setPixmap(QPixmap.fromImage(Pic))
             self.Capture.release()
         else:
             self.CaptureSession = cv2.VideoCapture(self.mainSelf.configuration.sessionCameraPort)
@@ -81,11 +101,13 @@ class cameraConfigPage():
                 _, Image = self.CaptureSession.read()
                 ConvertToQtFormat = QImage(Image.data, Image.shape[1], Image.shape[0], QImage.Format_BGR888)
                 Pic = ConvertToQtFormat.scaled(640, 480, Qt.KeepAspectRatio)
-                self.sessionCameraConfig_Label.setPixmap(QPixmap.fromImage(Pic))
+                self.ImageUpdate_Session.emit(Pic)
+                # self.sessionCameraConfig_Label.setPixmap(QPixmap.fromImage(Pic))
 
                 _, Image2 = self.CaptureFaceID.read()
                 ConvertToQtFormat2 = QImage(Image2.data, Image2.shape[1], Image2.shape[0], QImage.Format_BGR888)
                 Pic2 = ConvertToQtFormat2.scaled(640, 480, Qt.KeepAspectRatio)
-                self.loginCameraConfig_Label.setPixmap(QPixmap.fromImage(Pic2))
+                self.ImageUpdate_FaceID.emit(Pic2)
+                # self.loginCameraConfig_Label.setPixmap(QPixmap.fromImage(Pic2))
             self.CaptureSession.release()
             self.CaptureFaceID.release()

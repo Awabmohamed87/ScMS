@@ -4281,9 +4281,9 @@ padding-bottom:7px;
      <property name="geometry">
       <rect>
        <x>660</x>
-       <y>70</y>
+       <y>60</y>
        <width>151</width>
-       <height>31</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="palette">
@@ -4527,7 +4527,7 @@ border-radius: 7px;
 color: rgb(64,64,64);</string>
      </property>
      <property name="text">
-      <string>Role</string>
+      <string>Role:</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -7168,21 +7168,21 @@ border-radius:38px;</string>
    <zorder>topBar_widget_11</zorder>
    <zorder>mainDashboardContainer_widget_11</zorder>
   </widget>
-  <zorder>uniformConfig_widget</zorder>
-  <zorder>welcomeScreen_widget</zorder>
-  <zorder>sessionReportScreen_widget</zorder>
-  <zorder>sessionHistory_widget</zorder>
+  <zorder>NewSessionScreen_widget</zorder>
   <zorder>aboutUS_widget</zorder>
   <zorder>cameraConfig_widget</zorder>
   <zorder>connectionError_widget</zorder>
+  <zorder>contactUS_widget</zorder>
   <zorder>dataEntry_widget</zorder>
   <zorder>faceID_widget</zorder>
-  <zorder>loginScreen_widget</zorder>
   <zorder>homeManagerScreen_widget</zorder>
-  <zorder>NewSessionScreen_widget</zorder>
-  <zorder>contactUS_widget</zorder>
-  <zorder>personalInfo_widget</zorder>
+  <zorder>loginScreen_widget</zorder>
   <zorder>newUser_widget</zorder>
+  <zorder>personalInfo_widget</zorder>
+  <zorder>sessionHistory_widget</zorder>
+  <zorder>sessionReportScreen_widget</zorder>
+  <zorder>uniformConfig_widget</zorder>
+  <zorder>welcomeScreen_widget</zorder>
  </widget>
  <resources>
   <include location="res.qrc"/>
